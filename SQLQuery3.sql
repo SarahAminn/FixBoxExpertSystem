@@ -25,7 +25,6 @@ QSP_IType varchar(max) not null,
 create table PrintersErrNMsg (
 PENM_Id int IDENTITY primary key not null,
 PENM_CodeOrMsg varchar(max) not null,
-PENM_Solution image not null,
 PENM_Company int not null foreign key references Companys(Company_Id),
 PENM_IType varchar(max) not null
 );
@@ -33,10 +32,25 @@ PENM_IType varchar(max) not null
 create table QuestionsPrinters (
 QPrinters_Id int IDENTITY not null primary key,
 QPrinters_Question varchar(max) not null,
-QPrinters_Solution image not null,
+QPrinters_Answer varchar(max) not null ,
 QPrinters_Type varchar(max) not null,
 QPrinters_Order int not null,
 QPrinters_IType varchar(max) not null,
 QPrinters_QType varchar(max) not null
 );
 
+create table ErrNMsSolutions (
+ErrSols_Id int IDENTITY primary key not null ,
+ErrSols_Solution image not null ,
+ErrSols_Order int not null ,
+ErrSols_CodeOMsg int Foreign key references PrintersErrNMsg (PENM_Id)
+
+);
+
+create table QuestionsSolutions (
+QS_Id int IDENTITY not null primary key ,
+QS_Solution image not null ,
+QS_Order int not null ,
+QS_Question int Foreign key references QuestionsPrinters (QPrinters_Id)
+
+);
