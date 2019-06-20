@@ -49,7 +49,7 @@
             this.pictureBoxSolution.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxSolution.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBoxSolution.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxSolution.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxSolution.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxSolution.Name = "pictureBoxSolution";
             this.pictureBoxSolution.Size = new System.Drawing.Size(186, 174);
             this.pictureBoxSolution.TabIndex = 0;
@@ -61,7 +61,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(186, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(666, 174);
             this.panel1.TabIndex = 1;
@@ -76,7 +76,7 @@
             this.panel3.Controls.Add(this.btnBrowse);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(188, 174);
             this.panel3.TabIndex = 1;
@@ -85,7 +85,7 @@
             // 
             this.TBOrder.Dock = System.Windows.Forms.DockStyle.Top;
             this.TBOrder.Location = new System.Drawing.Point(0, 13);
-            this.TBOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBOrder.Margin = new System.Windows.Forms.Padding(2);
             this.TBOrder.Name = "TBOrder";
             this.TBOrder.Size = new System.Drawing.Size(188, 20);
             this.TBOrder.TabIndex = 2;
@@ -105,7 +105,7 @@
             // 
             this.btnBrowse.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnBrowse.Location = new System.Drawing.Point(0, 134);
-            this.btnBrowse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBrowse.Margin = new System.Windows.Forms.Padding(2);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(188, 40);
             this.btnBrowse.TabIndex = 0;
@@ -120,7 +120,7 @@
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(492, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(174, 174);
             this.panel2.TabIndex = 0;
@@ -132,7 +132,7 @@
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.Red;
             this.btnClose.Location = new System.Drawing.Point(0, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(174, 39);
             this.btnClose.TabIndex = 2;
@@ -144,7 +144,7 @@
             // 
             this.btnClear.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnClear.Location = new System.Drawing.Point(0, 94);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(174, 40);
             this.btnClear.TabIndex = 1;
@@ -156,7 +156,7 @@
             // 
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnSave.Location = new System.Drawing.Point(0, 134);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(174, 40);
             this.btnSave.TabIndex = 0;
@@ -170,7 +170,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBoxSolution);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddErrNMsgSolutions";
             this.Size = new System.Drawing.Size(852, 174);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
