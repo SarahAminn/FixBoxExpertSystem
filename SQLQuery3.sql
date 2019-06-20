@@ -4,10 +4,6 @@ Company_Id int IDENTITY not null primary key,
 Company_name varchar(max),
 );
 
-
-
-
-
 create table Printers(
 printer_Id int Identity not null primary key,
 printer_Type varchar(max) not null,
@@ -43,3 +39,4 @@ QPrinters_Order int not null,
 QPrinters_IType varchar(max) not null,
 QPrinters_QType varchar(max) not null
 );
+
