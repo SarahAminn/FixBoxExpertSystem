@@ -1,0 +1,28 @@
+C:\Users\Bahaa\Desktop\FIXBOX\WindowsFormsApplication1\bin\Debug\FIXBOX.exe.config
+C:\Users\Bahaa\Desktop\FIXBOX\WindowsFormsApplication1\bin\Debug\FIXBOX.exe
+C:\Users\Bahaa\Desktop\FIXBOX\WindowsFormsApplication1\bin\Debug\FIXBOX.pdb
+C:\Users\Bahaa\Desktop\FIXBOX\WindowsFormsApplication1\obj\Debug\FIXBOX.csprojResolveAssemblyReference.cache
+C:\Users\Bahaa\Desktop\FIXBOX\WindowsFormsApplication1\obj\Debug\FIXBOX.About.resources
+C:\Users\Bahaa\Desktop\FIXBOX\WindowsFormsApplication1\obj\Debug\FIXBOX.Home.resources
+C:\Users\Bahaa\Desktop\FIXBOX\WindowsFormsApplication1\obj\Debug\FIXBOX.Properties.Resources.resources
+C:\Users\Bahaa\Desktop\FIXBOX\WindowsFormsApplication1\obj\Debug\FIXBOX.csproj.GenerateResource.Cache
+C:\Users\Bahaa\Desktop\FIXBOX\WindowsFormsApplication1\obj\Debug\FIXBOX.exe
+C:\Users\Bahaa\Desktop\FIXBOX\WindowsFormsApplication1\obj\Debug\FIXBOX.pdb
+C:\Users\Sarah Hatem\Desktop\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\bin\Debug\FIXBOX.exe.config
+C:\Users\Sarah Hatem\Desktop\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\bin\Debug\FIXBOX.exe
+C:\Users\Sarah Hatem\Desktop\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\bin\Debug\FIXBOX.pdb
+C:\Users\Sarah Hatem\Desktop\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Debug\FIXBOX.About.resources
+C:\Users\Sarah Hatem\Desktop\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Debug\FIXBOX.AddCodeOrMsg.resources
+C:\Users\Sarah Hatem\Desktop\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Debug\FIXBOX.AddCompany.resources
+C:\Users\Sarah Hatem\Desktop\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Debug\FIXBOX.AddPrinter.resources
+C:\Users\Sarah Hatem\Desktop\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Debug\FIXBOX.AddQuestionP.resources
+C:\Users\Sarah Hatem\Desktop\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Debug\FIXBOX.Admin.resources
+C:\Users\Sarah Hatem\Desktop\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Debug\FIXBOX.Device.resources
+C:\Users\Sarah Hatem\Desktop\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Debug\FIXBOX.DeviceMain.resources
+C:\Users\Sarah Hatem\Desktop\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Debug\FIXBOX.Home.resources
+C:\Users\Sarah Hatem\Desktop\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Debug\FIXBOX.Properties.Resources.resources
+C:\Users\Sarah Hatem\Desktop\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Debug\FIXBOX.csproj.GenerateResource.Cache
+C:\Users\Sarah Hatem\Desktop\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Debug\FIXBOX.exe
+C:\Users\Sarah Hatem\Desktop\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Debug\FIXBOX.pdb
+C:\Users\Sarah Hatem\Desktop\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Debug\FIXBOX.AddQSetup.resources
+C:\Users\Sarah Hatem\Desktop\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Debug\FIXBOX.csprojResolveAssemblyReference.cache
