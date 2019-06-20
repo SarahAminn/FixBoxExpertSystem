@@ -22,7 +22,7 @@ namespace FIXBOX
             con.ConnectionString = "data source = (local);database = FIXBOX;integrated security = SSPI";
             loadComboBox("select Company_name from Companys", cbCo);
             loadComboBox("select QSP_Id from QuickSetupPrinters", cbDelete);
-            //LoadTable(dataGridView1);
+            LoadTable(dataGridView1);
         }
 
 
@@ -54,7 +54,7 @@ namespace FIXBOX
             string Val = " ";
             try
             {
-                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select '" + Col + "' from '" + DBname + "' where '" + SelectedCol + "'='" + comboBox2.SelectedItem.ToString() + "'", con);
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from " + DBname + " where " + SelectedCol + "='" + comboBox2.SelectedItem.ToString() + "'", con);
                 DataTable dt = new DataTable();
                 con.Open();
                 Cmd_CI.Fill(dt);
@@ -150,7 +150,7 @@ namespace FIXBOX
                 FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read);
                 BinaryReader br = new BinaryReader(fs);
                 img = br.ReadBytes((int)fs.Length);
-                String query = "insert into QuickSetupPrinters(QSP_IType,QSP_Order,QSP_Company,QSP_QSetup) values('"+tbIType.Text+"',"+tbOrder.Text+",'"+getvaluefromDB("Company_Id","Company_name","FIXBOX",con,cbCo)+"',@img)";
+                String query = "insert into QuickSetupPrinters(QSP_IType,QSP_Order,QSP_Company,QSP_QSetup) values('"+tbIType.Text+"',"+tbOrder.Text+",'"+getvaluefromDB("Company_Id","Company_name","Companys",con,cbCo)+"',@img)";
                 if (con.State != ConnectionState.Open)
                     con.Open();
                 SqlCommand command = new SqlCommand(query, con);

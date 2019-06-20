@@ -66,41 +66,46 @@
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(60, 579);
+            this.panel1.Size = new System.Drawing.Size(45, 470);
             this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1196, 0);
+            this.panel2.Location = new System.Drawing.Point(898, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(62, 579);
+            this.panel2.Size = new System.Drawing.Size(46, 470);
             this.panel2.TabIndex = 1;
             // 
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(60, 535);
+            this.panel3.Location = new System.Drawing.Point(45, 434);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1136, 44);
+            this.panel3.Size = new System.Drawing.Size(853, 36);
             this.panel3.TabIndex = 2;
             // 
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(60, 0);
+            this.panel4.Location = new System.Drawing.Point(45, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1136, 41);
+            this.panel4.Size = new System.Drawing.Size(853, 33);
             this.panel4.TabIndex = 3;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.dataGridView1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(60, 41);
+            this.panel5.Location = new System.Drawing.Point(45, 33);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1136, 189);
+            this.panel5.Size = new System.Drawing.Size(853, 154);
             this.panel5.TabIndex = 4;
             // 
             // dataGridView1
@@ -108,9 +113,10 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1136, 189);
+            this.dataGridView1.Size = new System.Drawing.Size(853, 154);
             this.dataGridView1.TabIndex = 0;
             // 
             // panel6
@@ -118,9 +124,10 @@
             this.panel6.Controls.Add(this.panel12);
             this.panel6.Controls.Add(this.panel11);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(60, 435);
+            this.panel6.Location = new System.Drawing.Point(45, 353);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1136, 100);
+            this.panel6.Size = new System.Drawing.Size(853, 81);
             this.panel6.TabIndex = 5;
             // 
             // panel12
@@ -129,17 +136,19 @@
             this.panel12.Controls.Add(this.btnDelete);
             this.panel12.Controls.Add(this.btnSave);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel12.Location = new System.Drawing.Point(936, 0);
+            this.panel12.Location = new System.Drawing.Point(703, 0);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(200, 100);
+            this.panel12.Size = new System.Drawing.Size(150, 81);
             this.panel12.TabIndex = 1;
             // 
             // btnClear
             // 
             this.btnClear.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnClear.Location = new System.Drawing.Point(0, 32);
+            this.btnClear.Location = new System.Drawing.Point(0, 26);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(200, 36);
+            this.btnClear.Size = new System.Drawing.Size(150, 29);
             this.btnClear.TabIndex = 2;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -149,8 +158,9 @@
             // 
             this.btnDelete.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDelete.Location = new System.Drawing.Point(0, 0);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(200, 32);
+            this.btnDelete.Size = new System.Drawing.Size(150, 26);
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -159,9 +169,10 @@
             // btnSave
             // 
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnSave.Location = new System.Drawing.Point(0, 68);
+            this.btnSave.Location = new System.Drawing.Point(0, 55);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(200, 32);
+            this.btnSave.Size = new System.Drawing.Size(150, 26);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -173,16 +184,18 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(200, 100);
+            this.panel11.Size = new System.Drawing.Size(150, 81);
             this.panel11.TabIndex = 0;
             // 
             // btnAddSol
             // 
             this.btnAddSol.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnAddSol.Location = new System.Drawing.Point(0, 32);
+            this.btnAddSol.Location = new System.Drawing.Point(0, 26);
+            this.btnAddSol.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddSol.Name = "btnAddSol";
-            this.btnAddSol.Size = new System.Drawing.Size(200, 68);
+            this.btnAddSol.Size = new System.Drawing.Size(150, 55);
             this.btnAddSol.TabIndex = 0;
             this.btnAddSol.Text = "Add Solution";
             this.btnAddSol.UseVisualStyleBackColor = true;
@@ -191,9 +204,10 @@
             // panel7
             // 
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(60, 230);
+            this.panel7.Location = new System.Drawing.Point(45, 187);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(200, 205);
+            this.panel7.Size = new System.Drawing.Size(150, 166);
             this.panel7.TabIndex = 6;
             // 
             // panel8
@@ -202,18 +216,20 @@
             this.panel8.Controls.Add(this.cbDelete);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel8.Location = new System.Drawing.Point(996, 230);
+            this.panel8.Location = new System.Drawing.Point(748, 187);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(200, 205);
+            this.panel8.Size = new System.Drawing.Size(150, 166);
             this.panel8.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label4.Location = new System.Drawing.Point(0, 151);
+            this.label4.Location = new System.Drawing.Point(0, 105);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(196, 24);
+            this.label4.Size = new System.Drawing.Size(154, 18);
             this.label4.TabIndex = 1;
             this.label4.Text = "Choose one to delete:";
             // 
@@ -222,17 +238,19 @@
             this.cbDelete.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.cbDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDelete.FormattingEnabled = true;
-            this.cbDelete.Location = new System.Drawing.Point(0, 175);
+            this.cbDelete.Location = new System.Drawing.Point(0, 141);
+            this.cbDelete.Margin = new System.Windows.Forms.Padding(2);
             this.cbDelete.Name = "cbDelete";
-            this.cbDelete.Size = new System.Drawing.Size(200, 30);
+            this.cbDelete.Size = new System.Drawing.Size(150, 25);
             this.cbDelete.TabIndex = 0;
             // 
             // panel9
             // 
             this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(796, 230);
+            this.panel9.Location = new System.Drawing.Point(598, 187);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(200, 205);
+            this.panel9.Size = new System.Drawing.Size(150, 166);
             this.panel9.TabIndex = 8;
             // 
             // panel10
@@ -245,26 +263,29 @@
             this.panel10.Controls.Add(this.label1);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel10.Location = new System.Drawing.Point(260, 230);
+            this.panel10.Location = new System.Drawing.Point(195, 187);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(536, 205);
+            this.panel10.Size = new System.Drawing.Size(403, 166);
             this.panel10.TabIndex = 9;
             // 
             // tbIT
             // 
             this.tbIT.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbIT.Location = new System.Drawing.Point(0, 115);
+            this.tbIT.Location = new System.Drawing.Point(0, 99);
+            this.tbIT.Margin = new System.Windows.Forms.Padding(2);
             this.tbIT.Name = "tbIT";
-            this.tbIT.Size = new System.Drawing.Size(536, 27);
+            this.tbIT.Size = new System.Drawing.Size(403, 23);
             this.tbIT.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Location = new System.Drawing.Point(0, 95);
+            this.label3.Location = new System.Drawing.Point(0, 82);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 20);
+            this.label3.Size = new System.Drawing.Size(93, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Industry type:";
             // 
@@ -273,27 +294,30 @@
             this.cbCo.Dock = System.Windows.Forms.DockStyle.Top;
             this.cbCo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCo.FormattingEnabled = true;
-            this.cbCo.Location = new System.Drawing.Point(0, 67);
+            this.cbCo.Location = new System.Drawing.Point(0, 57);
+            this.cbCo.Margin = new System.Windows.Forms.Padding(2);
             this.cbCo.Name = "cbCo";
-            this.cbCo.Size = new System.Drawing.Size(536, 28);
+            this.cbCo.Size = new System.Drawing.Size(403, 25);
             this.cbCo.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Location = new System.Drawing.Point(0, 47);
+            this.label2.Location = new System.Drawing.Point(0, 40);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 20);
+            this.label2.Size = new System.Drawing.Size(71, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Company:";
             // 
             // tbCodeMsg
             // 
             this.tbCodeMsg.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbCodeMsg.Location = new System.Drawing.Point(0, 20);
+            this.tbCodeMsg.Location = new System.Drawing.Point(0, 17);
+            this.tbCodeMsg.Margin = new System.Windows.Forms.Padding(2);
             this.tbCodeMsg.Name = "tbCodeMsg";
-            this.tbCodeMsg.Size = new System.Drawing.Size(536, 27);
+            this.tbCodeMsg.Size = new System.Drawing.Size(403, 23);
             this.tbCodeMsg.TabIndex = 1;
             // 
             // label1
@@ -301,14 +325,15 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 20);
+            this.label1.Size = new System.Drawing.Size(126, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Code Or Message:";
             // 
             // AddCodeOrMsg
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel9);
@@ -320,8 +345,9 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddCodeOrMsg";
-            this.Size = new System.Drawing.Size(1258, 579);
+            this.Size = new System.Drawing.Size(944, 470);
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel6.ResumeLayout(false);

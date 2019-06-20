@@ -22,7 +22,7 @@ namespace FIXBOX
             con.ConnectionString = "data source = (local);database = FIXBOX;integrated security = SSPI";
             loadComboBox("select Company_name from Companys", cbCo);
             loadComboBox("select PENM_CodeOrMsg from PrintersErrNMsg", cbDelete);
-            // LoadTable(dataGridView1);
+             LoadTable(dataGridView1);
         }
 
 
@@ -54,7 +54,7 @@ namespace FIXBOX
             string Val = " ";
             try
             {
-                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select '" + Col + "' from '" + DBname + "' where '" + SelectedCol + "'='" + comboBox2.SelectedItem.ToString() + "'", con);
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from " + DBname + " where " + SelectedCol + "='" + comboBox2.SelectedItem.ToString() + "'", con);
                 DataTable dt = new DataTable();
                 con.Open();
                 Cmd_CI.Fill(dt);
@@ -80,7 +80,7 @@ namespace FIXBOX
             string Val = " ";
             try
             {
-                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select '" + Col + "' from '" + TBname + "' where '" + SelectedCol1 + "'='" + cb.SelectedItem.ToString() + "'and '"+SelectedCol2 +"'='"+tb.Text+"'", con);
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from " + TBname + " where " + SelectedCol1 + "='" + getvaluefromDB("Company_Id", "Company_Name", "Companys", con, cbCo) + "'and " + SelectedCol2 + "='" + tb.Text + "'", con);
                 DataTable dt = new DataTable();
                 con.Open();
                 Cmd_CI.Fill(dt);
@@ -154,7 +154,7 @@ namespace FIXBOX
         {
             try {
                 
-                String query = "insert into PrintersErrNMsg(PENM_CodeOrMsg,PENM_Company,PENM_IType) values('" + tbCodeMsg.Text + "','" + getvaluefromDB("Company_Id", "Company_Name", "FIXBOX", con, cbCo) + "','"+tbIT.Text+"')";
+                String query = "insert into PrintersErrNMsg(PENM_CodeOrMsg,PENM_Company,PENM_IType) values('" + tbCodeMsg.Text + "','" + getvaluefromDB("Company_Id", "Company_Name", "Companys", con, cbCo) + "','"+tbIT.Text+"')";
                 if (con.State != ConnectionState.Open)
                     con.Open();
                 SqlCommand command = new SqlCommand(query, con);

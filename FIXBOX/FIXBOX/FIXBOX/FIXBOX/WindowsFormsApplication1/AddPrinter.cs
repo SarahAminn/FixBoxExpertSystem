@@ -50,7 +50,7 @@ namespace FIXBOX
             string Val=" ";
             try
             {
-                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select '" + Col + "' from '" + DBname + "' where '" + SelectedCol + "'='" + comboBox2.SelectedItem.ToString() + "'", con);
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from " + DBname + " where " + SelectedCol + "='" + comboBox2.SelectedItem.ToString() + "'", con);
                 DataTable dt = new DataTable();
                 con.Open();
                 Cmd_CI.Fill(dt);
@@ -105,14 +105,14 @@ namespace FIXBOX
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            String Co = getvaluefromDB("Company_Id", "Company_Name", "FIXBOX", con, comboBox1);
+            String Co = getvaluefromDB("Company_Id", "Company_Name", "Companys", con, comboBox1);
             try
             {
                 byte[] img = null;
                 FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read);
                 BinaryReader br = new BinaryReader(fs);
                 img = br.ReadBytes((int)fs.Length);
-                String query = "insert into Printers(printer_model,printer_Type,printer_Company,printer_IType,printer_Desc,printer_Image) values('"+tbModel.Text+"','"+tbPType.Text+"','"+Co+"','"+tbIType.Text+"','"+tbDescription.Text+"',@img)";
+                String query = "insert into Printers(printer_model,printer_Type,printer_Company,printers_IType,printer_Desc,printer_Image) values('" + tbModel.Text + "','" + tbPType.Text + "','" + Co + "','" + tbIType.Text + "','" + tbDescription.Text + "',@img)";
                 if(con.State!=ConnectionState.Open)
                       con.Open();
                  SqlCommand command = new SqlCommand(query,con);

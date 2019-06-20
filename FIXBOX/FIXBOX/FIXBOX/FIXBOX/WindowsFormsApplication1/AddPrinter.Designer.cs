@@ -166,65 +166,65 @@
             // tbDescription
             // 
             this.tbDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbDescription.Location = new System.Drawing.Point(0, 190);
+            this.tbDescription.Location = new System.Drawing.Point(0, 158);
             this.tbDescription.Multiline = true;
             this.tbDescription.Name = "tbDescription";
             this.tbDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbDescription.Size = new System.Drawing.Size(381, 305);
+            this.tbDescription.Size = new System.Drawing.Size(381, 337);
             this.tbDescription.TabIndex = 7;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label7.Location = new System.Drawing.Point(0, 165);
+            this.label7.Location = new System.Drawing.Point(0, 138);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 25);
+            this.label7.Size = new System.Drawing.Size(93, 20);
             this.label7.TabIndex = 6;
             this.label7.Text = "Description:";
             // 
             // tbIType
             // 
             this.tbIType.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbIType.Location = new System.Drawing.Point(0, 135);
+            this.tbIType.Location = new System.Drawing.Point(0, 112);
             this.tbIType.Name = "tbIType";
-            this.tbIType.Size = new System.Drawing.Size(381, 30);
+            this.tbIType.Size = new System.Drawing.Size(381, 26);
             this.tbIType.TabIndex = 5;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.Location = new System.Drawing.Point(0, 110);
+            this.label6.Location = new System.Drawing.Point(0, 92);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 25);
+            this.label6.Size = new System.Drawing.Size(108, 20);
             this.label6.TabIndex = 4;
             this.label6.Text = "Industry Type:";
             // 
             // tbPType
             // 
             this.tbPType.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbPType.Location = new System.Drawing.Point(0, 80);
+            this.tbPType.Location = new System.Drawing.Point(0, 66);
             this.tbPType.Name = "tbPType";
-            this.tbPType.Size = new System.Drawing.Size(381, 30);
+            this.tbPType.Size = new System.Drawing.Size(381, 26);
             this.tbPType.TabIndex = 3;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label5.Location = new System.Drawing.Point(0, 55);
+            this.label5.Location = new System.Drawing.Point(0, 46);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 25);
+            this.label5.Size = new System.Drawing.Size(47, 20);
             this.label5.TabIndex = 2;
             this.label5.Text = "Type:";
             // 
             // tbModel
             // 
             this.tbModel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbModel.Location = new System.Drawing.Point(0, 25);
+            this.tbModel.Location = new System.Drawing.Point(0, 20);
             this.tbModel.Name = "tbModel";
-            this.tbModel.Size = new System.Drawing.Size(381, 30);
+            this.tbModel.Size = new System.Drawing.Size(381, 26);
             this.tbModel.TabIndex = 1;
             // 
             // label4
@@ -233,7 +233,7 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Top;
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 25);
+            this.label4.Size = new System.Drawing.Size(56, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "Model:";
             // 
@@ -250,9 +250,9 @@
             this.comboBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(0, 25);
+            this.comboBox1.Location = new System.Drawing.Point(0, 20);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(308, 33);
+            this.comboBox1.Size = new System.Drawing.Size(308, 28);
             this.comboBox1.TabIndex = 1;
             // 
             // label8
@@ -261,7 +261,7 @@
             this.label8.Dock = System.Windows.Forms.DockStyle.Top;
             this.label8.Location = new System.Drawing.Point(0, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(103, 25);
+            this.label8.Size = new System.Drawing.Size(80, 20);
             this.label8.TabIndex = 0;
             this.label8.Text = "Company:";
             // 
