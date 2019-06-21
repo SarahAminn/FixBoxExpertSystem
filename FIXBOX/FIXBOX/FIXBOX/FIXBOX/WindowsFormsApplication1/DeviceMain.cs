@@ -16,5 +16,10 @@ namespace FIXBOX
         {
             InitializeComponent();
         }
+
+        private void DeviceMain_Load(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

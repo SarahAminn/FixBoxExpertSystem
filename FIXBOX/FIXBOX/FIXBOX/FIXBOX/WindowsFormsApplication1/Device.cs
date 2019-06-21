@@ -16,7 +16,7 @@ namespace FIXBOX
     {
         
         int op = Home.op;
-        public static string Model, Co;
+        public static string id=null;
         SqlConnection con = new SqlConnection();
         public Device()
         {
@@ -25,13 +25,13 @@ namespace FIXBOX
         }
 
         // Get a Value From the data base 
-        public string getvaluefromDB(String Col, String SelectedCol, String DBname, SqlConnection con, ComboBox comboBox2)
+        public string getvaluefromDB(String Col, String SelectedCol,String SelectedCol2, String TBname, SqlConnection con, ComboBox comboBox2, TextBox tt)
         {
 
             string Val = " ";
             try
             {
-                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from " + DBname + " where " + SelectedCol + "='" + comboBox2.SelectedItem.ToString() + "'", con);
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from " + TBname + " where " + SelectedCol + "='" + comboBox2.SelectedItem.ToString() + "'and "+SelectedCol2+"='"+tt.Text+"'", con);
                 DataTable dt = new DataTable();
                 con.Open();
                 Cmd_CI.Fill(dt);
@@ -80,34 +80,24 @@ namespace FIXBOX
             }
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            if (op != 0 && comboBox1.Text != "Choose the Device Company..." && (textBox1.Text != " " || textBox1.Text != null))
-            {
-                Model = textBox1.Text;
-                Co = comboBox1.Text;
-            }
-            else if (op == 0)
-            {
-                MessageBox.Show("Please choose a Device from the left side!", "ERROR!!");
-            }
-            else
-            {
-                MessageBox.Show("Company or Model is not set!", "ERROR!!");
-            }
-        }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                id = getvaluefromDB("printer_Id", "printer_Company", "printer_model", "Printers", con, comboBox1, textBox1);
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message+"Printer is not in the system"); }
+            if (id != null)
+            {
+                DeviceMain DM = new DeviceMain();
 
-
-
-            DeviceMain DM = new DeviceMain();
-            
-            this.Parent.Controls.Add(DM);
-            DM.Dock = DockStyle.Fill;
-            DM.BringToFront();
-            this.Hide();
+                this.Parent.Controls.Add(DM);
+                DM.Dock = DockStyle.Fill;
+                DM.BringToFront();
+                this.Hide();
+            }
         }
     }
 }
