@@ -175,5 +175,10 @@ namespace FIXBOX
             this.Controls.Add(SS);
             SS.BringToFront();
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadTable(dataGridView1);
+        }
     }
 }

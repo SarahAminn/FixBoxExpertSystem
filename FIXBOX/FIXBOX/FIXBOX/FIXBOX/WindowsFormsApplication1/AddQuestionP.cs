@@ -21,7 +21,7 @@ namespace FIXBOX
             InitializeComponent();
             con.ConnectionString = "data source = (local);database = FIXBOX;integrated security = SSPI";
             loadComboBox("select QPrinters_Id from QuestionsPrinters", cbDelete);
-            //LoadTable(dataGridView1);
+            LoadTable(dataGridView1);
         }
 
 
@@ -73,13 +73,39 @@ namespace FIXBOX
 
             return Val;
         }
+        public string getvaluefromDB( SqlConnection con, String Col)
+        {
+
+            string Val = " ";
+            try
+            {
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select "+Col+" from QuestionsPrinters where QPrinters_Question='" + tbQuestion.Text + "'and QPrinters_Type='" + tbType.Text + "'and QPrinters_Order='" + tbOrder.Text + "'and QPrinters_IType='" + tbIT.Text + "'and QPrinters_QType='" + tbQType.Text + "'and QPrinters_Answer='" + tbAnswer.Text + "'", con);
+                DataTable dt = new DataTable();
+                con.Open();
+                Cmd_CI.Fill(dt);
+
+                if (dt.Rows.Count == 1)
+                {
+
+                    DataRow row = dt.Rows[0];
+                    Val = row[Col].ToString();
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return Val;
+        }
 
         // Loads Data Grid Views
         public void LoadTable(DataGridView dataGridView1)
         {
             try
             {
-                SqlCommand Cmd = new SqlCommand("select * from PrintersErrNMsg", con);
+                SqlCommand Cmd = new SqlCommand("select * from QuestionsPrinters", con);
                 con.Open();
                 SqlDataReader DR = Cmd.ExecuteReader();
                 BindingSource source = new BindingSource();
@@ -112,7 +138,9 @@ namespace FIXBOX
 
         private void btnBrowse_Click(object sender, EventArgs e)
         {
-           
+            AddQPSolutions s = new AddQPSolutions();
+            this.Controls.Add(s);
+            s.BringToFront();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -158,10 +186,16 @@ namespace FIXBOX
                 int x = command.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show(x.ToString() + " record(s) saved.");
-
+                AddQPSolutions.id = getvaluefromDB(con, "QPrinters_Id");
+                MessageBox.Show(AddQPSolutions.id);
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadTable(dataGridView1);
         }
     }
 }

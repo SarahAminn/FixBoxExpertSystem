@@ -76,5 +76,10 @@ namespace FIXBOX
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadTable();
+        }
     }
 }

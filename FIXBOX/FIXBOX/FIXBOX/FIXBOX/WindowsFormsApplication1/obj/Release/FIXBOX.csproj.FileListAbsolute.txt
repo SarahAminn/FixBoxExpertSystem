@@ -56,3 +56,4 @@ C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\W
 C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.Home.resources
 C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.Properties.Resources.resources
 C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.csproj.GenerateResource.Cache
+C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.AddQPSolutions.resources

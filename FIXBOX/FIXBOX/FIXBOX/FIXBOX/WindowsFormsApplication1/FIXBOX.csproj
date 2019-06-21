@@ -93,6 +93,12 @@
     <Compile Include="AddPrinter.Designer.cs">
       <DependentUpon>AddPrinter.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddQPSolutions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddQPSolutions.Designer.cs">
+      <DependentUpon>AddQPSolutions.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddQSetup.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddPrinter.resx">
       <DependentUpon>AddPrinter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddQPSolutions.resx">
+      <DependentUpon>AddQPSolutions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddQSetup.resx">
       <DependentUpon>AddQSetup.cs</DependentUpon>

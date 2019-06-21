@@ -52,6 +52,7 @@
             this.pictureBoxSolution.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxSolution.Name = "pictureBoxSolution";
             this.pictureBoxSolution.Size = new System.Drawing.Size(186, 174);
+            this.pictureBoxSolution.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxSolution.TabIndex = 0;
             this.pictureBoxSolution.TabStop = false;
             // 

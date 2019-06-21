@@ -51,6 +51,8 @@
             this.pictureBox_QS = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -58,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_QS)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,25 +69,25 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(32, 439);
+            this.panel1.Size = new System.Drawing.Size(32, 486);
             this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(945, 0);
+            this.panel2.Location = new System.Drawing.Point(955, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(26, 439);
+            this.panel2.Size = new System.Drawing.Size(26, 486);
             this.panel2.TabIndex = 1;
             // 
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(32, 407);
+            this.panel3.Location = new System.Drawing.Point(32, 454);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(913, 32);
+            this.panel3.Size = new System.Drawing.Size(923, 32);
             this.panel3.TabIndex = 2;
             // 
             // panel4
@@ -93,18 +96,19 @@
             this.panel4.Location = new System.Drawing.Point(32, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(913, 28);
+            this.panel4.Size = new System.Drawing.Size(923, 28);
             this.panel4.TabIndex = 3;
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.panel10);
             this.panel5.Controls.Add(this.panel8);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel5.Location = new System.Drawing.Point(32, 287);
+            this.panel5.Location = new System.Drawing.Point(32, 284);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(913, 120);
+            this.panel5.Size = new System.Drawing.Size(923, 170);
             this.panel5.TabIndex = 4;
             // 
             // panel8
@@ -115,10 +119,10 @@
             this.panel8.Controls.Add(this.btnClear);
             this.panel8.Controls.Add(this.btnSave);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(763, 0);
+            this.panel8.Location = new System.Drawing.Point(773, 0);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(150, 120);
+            this.panel8.Size = new System.Drawing.Size(150, 170);
             this.panel8.TabIndex = 0;
             // 
             // cbDelete
@@ -146,7 +150,7 @@
             // btnDelete
             // 
             this.btnDelete.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnDelete.Location = new System.Drawing.Point(0, 47);
+            this.btnDelete.Location = new System.Drawing.Point(0, 97);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(150, 24);
@@ -158,7 +162,7 @@
             // btnClear
             // 
             this.btnClear.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnClear.Location = new System.Drawing.Point(0, 71);
+            this.btnClear.Location = new System.Drawing.Point(0, 121);
             this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(150, 25);
@@ -170,7 +174,7 @@
             // btnSave
             // 
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnSave.Location = new System.Drawing.Point(0, 96);
+            this.btnSave.Location = new System.Drawing.Point(0, 146);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(150, 24);
@@ -193,7 +197,7 @@
             this.panel6.Location = new System.Drawing.Point(32, 28);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(502, 259);
+            this.panel6.Size = new System.Drawing.Size(502, 256);
             this.panel6.TabIndex = 5;
             // 
             // tbIType
@@ -266,13 +270,13 @@
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(254, 259);
+            this.panel9.Size = new System.Drawing.Size(254, 256);
             this.panel9.TabIndex = 0;
             // 
             // btnBrowse
             // 
             this.btnBrowse.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnBrowse.Location = new System.Drawing.Point(0, 221);
+            this.btnBrowse.Location = new System.Drawing.Point(0, 218);
             this.btnBrowse.Margin = new System.Windows.Forms.Padding(2);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(254, 38);
@@ -289,6 +293,7 @@
             this.pictureBox_QS.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox_QS.Name = "pictureBox_QS";
             this.pictureBox_QS.Size = new System.Drawing.Size(254, 137);
+            this.pictureBox_QS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_QS.TabIndex = 0;
             this.pictureBox_QS.TabStop = false;
             // 
@@ -299,7 +304,7 @@
             this.panel7.Location = new System.Drawing.Point(534, 28);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(411, 259);
+            this.panel7.Size = new System.Drawing.Size(421, 256);
             this.panel7.TabIndex = 6;
             // 
             // dataGridView1
@@ -310,8 +315,28 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(411, 259);
+            this.dataGridView1.Size = new System.Drawing.Size(421, 256);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.btnRefresh);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel10.Location = new System.Drawing.Point(592, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(181, 170);
+            this.panel10.TabIndex = 1;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRefresh.Location = new System.Drawing.Point(0, 0);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(181, 36);
+            this.btnRefresh.TabIndex = 0;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // AddQSetup
             // 
@@ -326,7 +351,7 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddQSetup";
-            this.Size = new System.Drawing.Size(971, 439);
+            this.Size = new System.Drawing.Size(981, 486);
             this.panel5.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
@@ -336,6 +361,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_QS)).EndInit();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel10.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -365,6 +391,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbCo;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Button btnRefresh;
 
     }
 }

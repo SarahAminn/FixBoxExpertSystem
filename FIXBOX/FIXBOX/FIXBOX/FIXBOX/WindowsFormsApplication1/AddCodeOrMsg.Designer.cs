@@ -53,6 +53,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbCodeMsg = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel6.SuspendLayout();
@@ -68,25 +69,25 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(45, 470);
+            this.panel1.Size = new System.Drawing.Size(45, 467);
             this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(898, 0);
+            this.panel2.Location = new System.Drawing.Point(1020, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(46, 470);
+            this.panel2.Size = new System.Drawing.Size(46, 467);
             this.panel2.TabIndex = 1;
             // 
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(45, 434);
+            this.panel3.Location = new System.Drawing.Point(45, 431);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(853, 36);
+            this.panel3.Size = new System.Drawing.Size(975, 36);
             this.panel3.TabIndex = 2;
             // 
             // panel4
@@ -95,7 +96,7 @@
             this.panel4.Location = new System.Drawing.Point(45, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(853, 33);
+            this.panel4.Size = new System.Drawing.Size(975, 33);
             this.panel4.TabIndex = 3;
             // 
             // panel5
@@ -105,7 +106,7 @@
             this.panel5.Location = new System.Drawing.Point(45, 33);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(853, 154);
+            this.panel5.Size = new System.Drawing.Size(975, 154);
             this.panel5.TabIndex = 4;
             // 
             // dataGridView1
@@ -116,7 +117,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(853, 154);
+            this.dataGridView1.Size = new System.Drawing.Size(975, 154);
             this.dataGridView1.TabIndex = 0;
             // 
             // panel6
@@ -124,10 +125,10 @@
             this.panel6.Controls.Add(this.panel12);
             this.panel6.Controls.Add(this.panel11);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(45, 353);
+            this.panel6.Location = new System.Drawing.Point(45, 350);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(853, 81);
+            this.panel6.Size = new System.Drawing.Size(975, 81);
             this.panel6.TabIndex = 5;
             // 
             // panel12
@@ -136,7 +137,7 @@
             this.panel12.Controls.Add(this.btnDelete);
             this.panel12.Controls.Add(this.btnSave);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel12.Location = new System.Drawing.Point(703, 0);
+            this.panel12.Location = new System.Drawing.Point(825, 0);
             this.panel12.Margin = new System.Windows.Forms.Padding(2);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(150, 81);
@@ -207,26 +208,27 @@
             this.panel7.Location = new System.Drawing.Point(45, 187);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(150, 166);
+            this.panel7.Size = new System.Drawing.Size(150, 163);
             this.panel7.TabIndex = 6;
             // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.btnRefresh);
             this.panel8.Controls.Add(this.label4);
             this.panel8.Controls.Add(this.cbDelete);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel8.Location = new System.Drawing.Point(748, 187);
+            this.panel8.Location = new System.Drawing.Point(870, 187);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(150, 166);
+            this.panel8.Size = new System.Drawing.Size(150, 163);
             this.panel8.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label4.Location = new System.Drawing.Point(0, 105);
+            this.label4.Location = new System.Drawing.Point(0, 102);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(154, 18);
@@ -238,7 +240,7 @@
             this.cbDelete.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.cbDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDelete.FormattingEnabled = true;
-            this.cbDelete.Location = new System.Drawing.Point(0, 141);
+            this.cbDelete.Location = new System.Drawing.Point(0, 138);
             this.cbDelete.Margin = new System.Windows.Forms.Padding(2);
             this.cbDelete.Name = "cbDelete";
             this.cbDelete.Size = new System.Drawing.Size(150, 25);
@@ -247,10 +249,10 @@
             // panel9
             // 
             this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(598, 187);
+            this.panel9.Location = new System.Drawing.Point(720, 187);
             this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(150, 166);
+            this.panel9.Size = new System.Drawing.Size(150, 163);
             this.panel9.TabIndex = 8;
             // 
             // panel10
@@ -266,7 +268,7 @@
             this.panel10.Location = new System.Drawing.Point(195, 187);
             this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(403, 166);
+            this.panel10.Size = new System.Drawing.Size(525, 163);
             this.panel10.TabIndex = 9;
             // 
             // tbIT
@@ -275,7 +277,7 @@
             this.tbIT.Location = new System.Drawing.Point(0, 99);
             this.tbIT.Margin = new System.Windows.Forms.Padding(2);
             this.tbIT.Name = "tbIT";
-            this.tbIT.Size = new System.Drawing.Size(403, 23);
+            this.tbIT.Size = new System.Drawing.Size(525, 23);
             this.tbIT.TabIndex = 5;
             // 
             // label3
@@ -297,7 +299,7 @@
             this.cbCo.Location = new System.Drawing.Point(0, 57);
             this.cbCo.Margin = new System.Windows.Forms.Padding(2);
             this.cbCo.Name = "cbCo";
-            this.cbCo.Size = new System.Drawing.Size(403, 25);
+            this.cbCo.Size = new System.Drawing.Size(525, 25);
             this.cbCo.TabIndex = 3;
             // 
             // label2
@@ -317,7 +319,7 @@
             this.tbCodeMsg.Location = new System.Drawing.Point(0, 17);
             this.tbCodeMsg.Margin = new System.Windows.Forms.Padding(2);
             this.tbCodeMsg.Name = "tbCodeMsg";
-            this.tbCodeMsg.Size = new System.Drawing.Size(403, 23);
+            this.tbCodeMsg.Size = new System.Drawing.Size(525, 23);
             this.tbCodeMsg.TabIndex = 1;
             // 
             // label1
@@ -330,6 +332,17 @@
             this.label1.Size = new System.Drawing.Size(126, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Code Or Message:";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRefresh.Location = new System.Drawing.Point(0, 0);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(150, 30);
+            this.btnRefresh.TabIndex = 2;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // AddCodeOrMsg
             // 
@@ -347,7 +360,7 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddCodeOrMsg";
-            this.Size = new System.Drawing.Size(944, 470);
+            this.Size = new System.Drawing.Size(1066, 467);
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel6.ResumeLayout(false);
@@ -388,5 +401,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnAddSol;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }
