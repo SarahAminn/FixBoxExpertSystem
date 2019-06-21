@@ -16,13 +16,42 @@ namespace FIXBOX
     {
         
         int op = Home.op;
-        public string Model, Co;
+        public static string Model, Co;
         SqlConnection con = new SqlConnection();
         public Device()
         {
             InitializeComponent();
             con.ConnectionString = "data source = (local);database = FIXBOX;integrated security = SSPI";
         }
+
+        // Get a Value From the data base 
+        public string getvaluefromDB(String Col, String SelectedCol, String DBname, SqlConnection con, ComboBox comboBox2)
+        {
+
+            string Val = " ";
+            try
+            {
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from " + DBname + " where " + SelectedCol + "='" + comboBox2.SelectedItem.ToString() + "'", con);
+                DataTable dt = new DataTable();
+                con.Open();
+                Cmd_CI.Fill(dt);
+
+                if (dt.Rows.Count == 1)
+                {
+
+                    DataRow row = dt.Rows[0];
+                    Val = row[Col].ToString();
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return Val;
+        }
+        
 
         private void Device_Load(object sender, EventArgs e)
         {
@@ -70,6 +99,9 @@ namespace FIXBOX
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+
+
             DeviceMain DM = new DeviceMain();
             
             this.Parent.Controls.Add(DM);

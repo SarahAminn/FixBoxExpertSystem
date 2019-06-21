@@ -45,32 +45,36 @@
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 560);
+            this.panel1.Size = new System.Drawing.Size(150, 455);
             this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(676, 0);
+            this.panel2.Location = new System.Drawing.Point(507, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 560);
+            this.panel2.Size = new System.Drawing.Size(150, 455);
             this.panel2.TabIndex = 1;
             // 
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(200, 0);
+            this.panel3.Location = new System.Drawing.Point(150, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(476, 100);
+            this.panel3.Size = new System.Drawing.Size(357, 81);
             this.panel3.TabIndex = 2;
             // 
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(200, 460);
+            this.panel4.Location = new System.Drawing.Point(150, 374);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(476, 100);
+            this.panel4.Size = new System.Drawing.Size(357, 81);
             this.panel4.TabIndex = 3;
             // 
             // panel5
@@ -83,26 +87,29 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Font = new System.Drawing.Font("Baloo Bhaina", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(112)))), ((int)(((byte)(159)))));
-            this.panel5.Location = new System.Drawing.Point(200, 100);
+            this.panel5.Location = new System.Drawing.Point(150, 81);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(476, 360);
+            this.panel5.Size = new System.Drawing.Size(357, 293);
             this.panel5.TabIndex = 4;
             // 
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox1.Location = new System.Drawing.Point(0, 131);
+            this.textBox1.Location = new System.Drawing.Point(0, 104);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(476, 48);
+            this.textBox1.Size = new System.Drawing.Size(357, 40);
             this.textBox1.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Location = new System.Drawing.Point(0, 90);
+            this.label2.Location = new System.Drawing.Point(0, 72);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 41);
+            this.label2.Size = new System.Drawing.Size(66, 32);
             this.label2.TabIndex = 4;
             this.label2.Text = "Model :";
             // 
@@ -111,9 +118,10 @@
             this.comboBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(0, 41);
+            this.comboBox1.Location = new System.Drawing.Point(0, 32);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(476, 49);
+            this.comboBox1.Size = new System.Drawing.Size(357, 40);
             this.comboBox1.TabIndex = 3;
             // 
             // label1
@@ -121,8 +129,9 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 41);
+            this.label1.Size = new System.Drawing.Size(90, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "Company :";
             // 
@@ -132,9 +141,10 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 311);
+            this.button1.Location = new System.Drawing.Point(0, 253);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(476, 49);
+            this.button1.Size = new System.Drawing.Size(357, 40);
             this.button1.TabIndex = 0;
             this.button1.Text = "Continue";
             this.button1.UseVisualStyleBackColor = false;
@@ -142,16 +152,15 @@
             // 
             // Device
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Device";
-            this.Size = new System.Drawing.Size(876, 560);
+            this.Size = new System.Drawing.Size(657, 455);
             this.Load += new System.EventHandler(this.Device_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
