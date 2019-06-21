@@ -25,13 +25,27 @@ namespace FIXBOX
         }
 
         // Get a Value From the data base 
-        public string getvaluefromDB(String Col, String SelectedCol,String SelectedCol2, String TBname, SqlConnection con, ComboBox comboBox2, TextBox tt)
+        public string getvaluefromDB()
         {
 
             string Val = " ";
             try
             {
-                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from " + TBname + " where " + SelectedCol + "='" + comboBox2.SelectedItem.ToString() + "'and "+SelectedCol2+"='"+tt.Text+"'", con);
+                string Coid = "";
+                SqlDataAdapter Cmd_C = new SqlDataAdapter("select Company_Id from Companys where Company_name='"+comboBox1.SelectedItem.ToString()+"'", con);
+                DataTable dt2 = new DataTable();
+                con.Open();
+                Cmd_C.Fill(dt2);
+
+                if (dt2.Rows.Count == 1)
+                {
+
+                    DataRow row = dt2.Rows[0];
+                    Coid = row["Company_Id"].ToString();
+                }
+                con.Close();
+
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select printer_Id from Printers where printer_Company='"+Coid+"'and printer_model='"+textBox1.Text+"'", con);
                 DataTable dt = new DataTable();
                 con.Open();
                 Cmd_CI.Fill(dt);
@@ -40,7 +54,7 @@ namespace FIXBOX
                 {
 
                     DataRow row = dt.Rows[0];
-                    Val = row[Col].ToString();
+                    Val = row["printer_Id"].ToString();
                 }
                 con.Close();
             }
@@ -86,7 +100,7 @@ namespace FIXBOX
         {
             try
             {
-                id = getvaluefromDB("printer_Id", "printer_Company", "printer_model", "Printers", con, comboBox1, textBox1);
+                id = getvaluefromDB();
             }
             catch (Exception ex) { MessageBox.Show(ex.Message+"Printer is not in the system"); }
             if (id != null)
