@@ -25,7 +25,7 @@ namespace FIXBOX
         }
 
         // Get a Value From the data base 
-        public string getvaluefromDB()
+        public string getvaluefromDB(String WantedCol, String TableName, String CompanyCol, String ModelCol)
         {
 
             string Val = " ";
@@ -45,7 +45,7 @@ namespace FIXBOX
                 }
                 con.Close();
 
-                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select printer_Id from Printers where printer_Company='"+Coid+"'and printer_model='"+textBox1.Text+"'", con);
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select "+WantedCol+" from "+TableName+" where "+CompanyCol+"='"+Coid+"'and "+ModelCol+"='"+textBox1.Text+"'", con);
                 DataTable dt = new DataTable();
                 con.Open();
                 Cmd_CI.Fill(dt);
@@ -54,7 +54,7 @@ namespace FIXBOX
                 {
 
                     DataRow row = dt.Rows[0];
-                    Val = row["printer_Id"].ToString();
+                    Val = row[WantedCol].ToString();
                 }
                 con.Close();
             }
@@ -98,11 +98,12 @@ namespace FIXBOX
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                id = getvaluefromDB();
-            }
-            catch (Exception ex) { MessageBox.Show(ex.Message+"Printer is not in the system"); }
+            
+                if (Home.op == 1)
+                {
+                    id = getvaluefromDB("printer_Id", "Printers", "printer_Company", "printer_model");
+                }
+            
             if (id != null)
             {
                 DeviceMain DM = new DeviceMain();

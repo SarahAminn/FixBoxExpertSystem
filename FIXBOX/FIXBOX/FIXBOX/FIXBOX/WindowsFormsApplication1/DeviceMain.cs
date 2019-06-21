@@ -23,7 +23,10 @@ namespace FIXBOX
 
         private void DeviceMain_Load(object sender, EventArgs e)
         {
-            FillUCP();
+            if (Home.op == 1)
+            {
+                FillUCP();
+            }
         }
 
         private void FillUCP() {
