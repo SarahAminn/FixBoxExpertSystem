@@ -100,6 +100,15 @@ namespace FIXBOX
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Description D = new Description();
+            this.Parent.Controls.Add(D);
+            D.Dock = DockStyle.Fill;
+            D.BringToFront();
+            this.Hide();
+        }
+
 
 
     }
