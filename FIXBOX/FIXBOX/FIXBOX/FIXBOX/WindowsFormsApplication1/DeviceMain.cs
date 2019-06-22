@@ -60,5 +60,47 @@ namespace FIXBOX
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
+
+
+        private void FillUCS()
+        {
+            try
+            {
+                string Id = Device.id;
+                string query = " SELECT Scanners.Scanner_model, Companys.Company_name,Scanners.Scanner_Image FROM Scanners INNER JOIN Companys ON Scanners.Scanner_Company = Companys.Company_Id where Scanners.Scanner_Id ='" + Id + "'";
+                if (con.State != ConnectionState.Open)
+                    con.Open();
+                SqlCommand cmd = new SqlCommand(query, con);
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                if (reader.HasRows)
+                {
+                    textBox1.Text = reader[1].ToString();
+                    textBox2.Text = reader[0].ToString();
+                    byte[] img = (byte[])(reader[2]);
+                    if (img == null)
+                    {
+                        pictureBox1.Image = null;
+                    }
+                    else
+                    {
+                        MemoryStream ms = new MemoryStream(img);
+                        pictureBox1.Image = Image.FromStream(ms);
+
+                    }
+                    con.Close();
+
+                }
+                else
+                {
+                    con.Close();
+                    MessageBox.Show("this Scanner doesn't exist!!");
+                }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+
+
     }
 }
