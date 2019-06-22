@@ -32,12 +32,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.btnBack = new System.Windows.Forms.Button();
-            this.panel5.SuspendLayout();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,36 +76,15 @@
             this.panel4.Size = new System.Drawing.Size(584, 19);
             this.panel4.TabIndex = 3;
             // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.richTextBox1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(35, 19);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(584, 380);
-            this.panel5.TabIndex = 4;
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.btnBack);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(35, 399);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(35, 404);
             this.panel6.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(584, 38);
+            this.panel6.Size = new System.Drawing.Size(584, 33);
             this.panel6.TabIndex = 5;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(584, 380);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
             // 
             // btnBack
             // 
@@ -116,18 +95,36 @@
             this.btnBack.Location = new System.Drawing.Point(0, 0);
             this.btnBack.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(183, 38);
+            this.btnBack.Size = new System.Drawing.Size(183, 33);
             this.btnBack.TabIndex = 0;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.richTextBox1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(35, 19);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(584, 385);
+            this.panel5.TabIndex = 6;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(584, 385);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "";
+            // 
             // Description
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -136,8 +133,8 @@
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.Name = "Description";
             this.Size = new System.Drawing.Size(657, 455);
-            this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -148,9 +145,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
