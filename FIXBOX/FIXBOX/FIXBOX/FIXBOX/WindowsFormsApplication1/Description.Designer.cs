@@ -133,6 +133,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.Name = "Description";
             this.Size = new System.Drawing.Size(657, 455);
+            this.Load += new System.EventHandler(this.Description_Load);
             this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
