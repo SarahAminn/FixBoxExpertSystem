@@ -50,6 +50,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel13.SuspendLayout();
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Img)).BeginInit();
@@ -84,9 +85,7 @@
             // panel13
             // 
             this.panel13.Controls.Add(this.btnClear);
-            this.panel13.Controls.Add(this.btnBrowse);
             this.panel13.Controls.Add(this.btnSave);
-            this.panel13.Controls.Add(this.panel17);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel13.Location = new System.Drawing.Point(997, 0);
@@ -107,10 +106,10 @@
             // 
             // btnBrowse
             // 
-            this.btnBrowse.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBrowse.Location = new System.Drawing.Point(0, 155);
+            this.btnBrowse.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnBrowse.Location = new System.Drawing.Point(0, 456);
             this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(200, 39);
+            this.btnBrowse.Size = new System.Drawing.Size(308, 39);
             this.btnBrowse.TabIndex = 2;
             this.btnBrowse.Text = "Browse";
             this.btnBrowse.UseVisualStyleBackColor = true;
@@ -130,10 +129,10 @@
             // panel17
             // 
             this.panel17.Controls.Add(this.pictureBox_Img);
-            this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel17.Location = new System.Drawing.Point(0, 0);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel17.Location = new System.Drawing.Point(0, 301);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(200, 155);
+            this.panel17.Size = new System.Drawing.Size(308, 155);
             this.panel17.TabIndex = 0;
             // 
             // pictureBox_Img
@@ -142,7 +141,7 @@
             this.pictureBox_Img.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox_Img.Location = new System.Drawing.Point(0, 0);
             this.pictureBox_Img.Name = "pictureBox_Img";
-            this.pictureBox_Img.Size = new System.Drawing.Size(200, 155);
+            this.pictureBox_Img.Size = new System.Drawing.Size(308, 155);
             this.pictureBox_Img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_Img.TabIndex = 0;
             this.pictureBox_Img.TabStop = false;
@@ -268,6 +267,9 @@
             // 
             // panel16
             // 
+            this.panel16.Controls.Add(this.label9);
+            this.panel16.Controls.Add(this.panel17);
+            this.panel16.Controls.Add(this.btnBrowse);
             this.panel16.Controls.Add(this.comboBox1);
             this.panel16.Controls.Add(this.label8);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -276,6 +278,16 @@
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(308, 495);
             this.panel16.TabIndex = 6;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label9.Location = new System.Drawing.Point(0, 281);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(108, 20);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Printer Image:";
             // 
             // AddPrinter
             // 
@@ -338,5 +350,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label label9;
     }
 }
