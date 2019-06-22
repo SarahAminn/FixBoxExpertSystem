@@ -32,20 +32,23 @@ namespace FIXBOX
 
         private void Description_Load(object sender, EventArgs e)
         {
-            try
+            if (Home.op == 1)
             {
-                SqlDataAdapter Cmd = new SqlDataAdapter("Select printer_Desc from Printers where printer_Id='" + Device.id + "'", con);
-                con.Open();
-                DataTable dt = new DataTable();
-                Cmd.Fill(dt);
-                if (dt.Rows.Count == 1)
+                try
                 {
-                    DataRow row = dt.Rows[0];
-                    string Decs = row["printer_Desc"].ToString();
-                    richTextBox1.Text = Decs.Replace("\\\\n", Environment.NewLine);
+                    SqlDataAdapter Cmd = new SqlDataAdapter("Select printer_Desc from Printers where printer_Id='" + Device.id + "'", con);
+                    con.Open();
+                    DataTable dt = new DataTable();
+                    Cmd.Fill(dt);
+                    if (dt.Rows.Count == 1)
+                    {
+                        DataRow row = dt.Rows[0];
+                        string Decs = row["printer_Desc"].ToString();
+                        richTextBox1.Text = Decs.Replace("\\\\n", Environment.NewLine);
+                    }
                 }
+                catch (Exception ex) { MessageBox.Show(ex.Message); }
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
     }
 }
