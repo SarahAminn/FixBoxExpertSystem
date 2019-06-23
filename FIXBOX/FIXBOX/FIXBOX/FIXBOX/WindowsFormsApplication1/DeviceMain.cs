@@ -118,6 +118,15 @@ namespace FIXBOX
             this.Hide();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Driver D = new Driver();
+            this.Parent.Controls.Add(D);
+            D.Dock = DockStyle.Fill;
+            D.BringToFront();
+            this.Hide();
+        }
+
 
 
     }
