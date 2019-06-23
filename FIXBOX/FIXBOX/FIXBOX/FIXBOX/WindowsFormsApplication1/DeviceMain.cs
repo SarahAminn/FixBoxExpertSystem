@@ -109,6 +109,15 @@ namespace FIXBOX
             this.Hide();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            QuickSetup QS = new QuickSetup();
+            this.Parent.Controls.Add(QS);
+            QS.Dock = DockStyle.Fill;
+            QS.BringToFront();
+            this.Hide();
+        }
+
 
 
     }
