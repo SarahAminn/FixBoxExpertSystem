@@ -136,6 +136,7 @@
             // 
             // pictureBox_QS
             // 
+            this.pictureBox_QS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_QS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox_QS.Location = new System.Drawing.Point(0, 0);
             this.pictureBox_QS.Name = "pictureBox_QS";

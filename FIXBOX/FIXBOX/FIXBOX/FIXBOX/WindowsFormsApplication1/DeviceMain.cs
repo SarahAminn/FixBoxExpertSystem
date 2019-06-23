@@ -29,17 +29,19 @@ namespace FIXBOX
             }
         }
 
-        private void FillUCP() {
+        private void FillUCP()
+        {
             try
             {
                 string Id = Device.id;
-                string query = " SELECT Printers.printer_model, Companys.Company_name,Printers.printer_Image FROM Printers INNER JOIN Companys ON Printers.printer_Company = Companys.Company_Id where Printers.Printer_Id ='"+Id+"'";
+                string query = " SELECT Printers.printer_model, Companys.Company_name,Printers.printer_Image FROM Printers INNER JOIN Companys ON Printers.printer_Company = Companys.Company_Id where Printers.Printer_Id ='" + Id + "'";
                 if (con.State != ConnectionState.Open)
                     con.Open();
                 SqlCommand cmd = new SqlCommand(query, con);
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();
-                if (reader.HasRows) {
+                if (reader.HasRows)
+                {
                     textBox1.Text = reader[1].ToString();
                     textBox2.Text = reader[0].ToString();
                     byte[] img = (byte[])(reader[2]);
@@ -47,16 +49,20 @@ namespace FIXBOX
                     {
                         pictureBox1.Image = null;
                     }
-                    else {
+                    else
+                    {
                         MemoryStream ms = new MemoryStream(img);
                         pictureBox1.Image = Image.FromStream(ms);
-                    
+
                     }
                     con.Close();
-                
-                } else { 
+
+                }
+                else
+                {
                     con.Close();
-                    MessageBox.Show("this printer doesn't exist!!"); }
+                    MessageBox.Show("this printer doesn't exist!!");
+                }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
@@ -120,7 +126,41 @@ namespace FIXBOX
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            DialogResult Dial = MessageBox.Show("Is the driver installed?", "Important!", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+
+            if (Dial == DialogResult.Yes)
+            {
+                Questions Q = new Questions();
+                this.Parent.Controls.Add(Q);
+                Q.Dock = DockStyle.Fill;
+                Q.BringToFront();
+                this.Hide();
+
+            }
+            else if (Dial == DialogResult.No)
+            {
+                DialogResult DD = MessageBox.Show("Please install the driver!", "Info", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                if (DD == DialogResult.OK) {
+                    QuickSetup QQ = new QuickSetup();
+                    this.Parent.Controls.Add(QQ);
+                    QQ.Dock = DockStyle.Fill;
+                    QQ.BringToFront();
+                    this.Hide();
+
+                }
+                else if (DD == DialogResult.Cancel) { 
+                
+                
+                }
+
+            }
+            else if (Dial == DialogResult.Cancel)
+            {
+
+
+            }
+            else { }
+
         }
 
 
