@@ -17,6 +17,7 @@ namespace FIXBOX
         SqlConnection con = new SqlConnection();
         SqlCommand cmd;
         string co = "", it = "";
+        int order = 1, Max=1;
         public QuickSetup()
         {
             InitializeComponent();
@@ -35,7 +36,9 @@ namespace FIXBOX
 
         private void QuickSetup_Load(object sender, EventArgs e)
         {
-
+            GetData();
+            getMax();
+            loadpicturebox();
         }
 
         private void GetData() {
@@ -57,14 +60,64 @@ namespace FIXBOX
             }
         }
 
+        private void loadpicturebox() {
+            try {
+                cmd = new SqlCommand("select QSP_QSetup from QuickSetupPrinters where QSP_Company='"+co+"' and QSP_IType='"+it+"' and QSP_Order='"+order+"' ", con);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                if (reader.HasRows)
+                {
+                    byte[] img = (byte[])reader[0];
+                    MemoryStream ms = new MemoryStream(img);
+                    pictureBox_QS.Image = Image.FromStream(ms);
+                    
+                }
+                con.Close();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        
+        
+        }
+
+        private void getMax(){
+            try {
+                cmd = new SqlCommand("select MAX(QSP_Order) from QuickSetupPrinters where where QSP_Company='" + co + "' and QSP_IType='" + it + "'", con);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                if (reader.HasRows)
+                {
+                    Max = (int)reader[0];
+                    
+                }
+                con.Close();
+            
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        
+        
+        
+        }
+
         private void btnNext_Click(object sender, EventArgs e)
         {
-
+            if (order != Max)
+            {
+                order++;
+                loadpicturebox();
+            }
+            else { MessageBox.Show("No more pictures!","Limit reached!",MessageBoxButtons.OK,MessageBoxIcon.Warning); }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            if (order > 1)
+            {
+                order--;
+                loadpicturebox();
+            }
+            else { MessageBox.Show("No more pictures!", "Limit reached!", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
     }
 }
