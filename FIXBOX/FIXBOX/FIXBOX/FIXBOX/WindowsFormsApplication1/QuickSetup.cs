@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Data.SqlClient;
 
 namespace FIXBOX
 {
     public partial class QuickSetup : UserControl
     {
+        SqlConnection con = new SqlConnection();
+        SqlCommand cmd;
+        string co = "", it = "";
         public QuickSetup()
         {
             InitializeComponent();
+            con.ConnectionString = "data source = (local);database = FIXBOX;integrated security = SSPI";
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -32,10 +38,33 @@ namespace FIXBOX
 
         }
 
-        private string GetCompanyP() {
-            string co = "";
+        private void GetData() {
+            try
+            {
+                cmd = new SqlCommand("select printer_Company,printers_IType from Printers where printer_Id='" + Device.id + "'", con);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                if (reader.HasRows)
+                {
+                    co = reader[0].ToString();
+                    it = reader[1].ToString();
+                }
+                con.Close();
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
-            return (co);
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

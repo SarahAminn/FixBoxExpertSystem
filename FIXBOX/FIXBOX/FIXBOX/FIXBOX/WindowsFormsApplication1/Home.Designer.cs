@@ -162,6 +162,7 @@
             this.button3.Text = "Scanners";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
@@ -206,9 +207,9 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Right;
             this.label1.Font = new System.Drawing.Font("Baloo Bhaina", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(763, 0);
+            this.label1.Location = new System.Drawing.Point(787, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 54);
+            this.label1.Size = new System.Drawing.Size(89, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "FIXBOX";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -235,7 +236,7 @@
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1102, 595);

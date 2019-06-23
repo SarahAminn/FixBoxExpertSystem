@@ -121,6 +121,7 @@
             this.btnNext.TabIndex = 1;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // button3
             // 
@@ -133,6 +134,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Previous";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // pictureBox_QS
             // 
