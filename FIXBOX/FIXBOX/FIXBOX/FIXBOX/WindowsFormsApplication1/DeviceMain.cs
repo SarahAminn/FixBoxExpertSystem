@@ -29,6 +29,33 @@ namespace FIXBOX
             }
         }
 
+        public string getvaluefromCompanys(SqlConnection con, String Col)
+        {
+
+            string Val = " ";
+            try
+            {
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from Companys where Company_Id='" + Device.co+ "'", con);
+                DataTable dt = new DataTable();
+                con.Open();
+                Cmd_CI.Fill(dt);
+
+                if (dt.Rows.Count == 1)
+                {
+
+                    DataRow row = dt.Rows[0];
+                    Val = row[Col].ToString();
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return Val;
+        }
+
         private void FillUCP()
         {
             try
@@ -62,11 +89,18 @@ namespace FIXBOX
                 {
                     con.Close();
                     MessageBox.Show("this printer doesn't exist!!");
+                    GoToSite(getvaluefromCompanys(con, "company_WebSearch") + Device.Model);
+                    this.Hide();
+                    
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
+        public static void GoToSite(string url)
+        {
+            System.Diagnostics.Process.Start(url);
+        }
 
         private void FillUCS()
         {

@@ -21,5 +21,14 @@ namespace FIXBOX
         {
 
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            DeviceMain DV = new DeviceMain();
+            this.Parent.Controls.Add(DV);
+            DV.Dock = DockStyle.Fill;
+            DV.BringToFront();
+            this.Hide();
+        }
     }
 }

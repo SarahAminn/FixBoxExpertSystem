@@ -33,10 +33,10 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnNext = new System.Windows.Forms.Button();
             this.btnPrevious = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox_QS = new System.Windows.Forms.PictureBox();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -88,27 +88,18 @@
             this.panel5.Size = new System.Drawing.Size(603, 37);
             this.panel5.TabIndex = 4;
             // 
-            // panel6
+            // btnPrevious
             // 
-            this.panel6.Controls.Add(this.pictureBox_QS);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(26, 27);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(603, 366);
-            this.panel6.TabIndex = 5;
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.DimGray;
-            this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(0, 0);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(64, 37);
-            this.btnBack.TabIndex = 0;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnPrevious.BackColor = System.Drawing.Color.DimGray;
+            this.btnPrevious.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrevious.Location = new System.Drawing.Point(411, 0);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(96, 37);
+            this.btnPrevious.TabIndex = 2;
+            this.btnPrevious.Text = "Previous";
+            this.btnPrevious.UseVisualStyleBackColor = false;
+            this.btnPrevious.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnNext
             // 
@@ -123,18 +114,27 @@
             this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // btnPrevious
+            // btnBack
             // 
-            this.btnPrevious.BackColor = System.Drawing.Color.DimGray;
-            this.btnPrevious.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrevious.Location = new System.Drawing.Point(411, 0);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(96, 37);
-            this.btnPrevious.TabIndex = 2;
-            this.btnPrevious.Text = "Previous";
-            this.btnPrevious.UseVisualStyleBackColor = false;
-            this.btnPrevious.Click += new System.EventHandler(this.button3_Click);
+            this.btnBack.BackColor = System.Drawing.Color.DimGray;
+            this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(0, 0);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(64, 37);
+            this.btnBack.TabIndex = 0;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.pictureBox_QS);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(26, 27);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(603, 366);
+            this.panel6.TabIndex = 5;
             // 
             // pictureBox_QS
             // 
@@ -143,6 +143,7 @@
             this.pictureBox_QS.Location = new System.Drawing.Point(0, 0);
             this.pictureBox_QS.Name = "pictureBox_QS";
             this.pictureBox_QS.Size = new System.Drawing.Size(603, 366);
+            this.pictureBox_QS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_QS.TabIndex = 0;
             this.pictureBox_QS.TabStop = false;
             // 

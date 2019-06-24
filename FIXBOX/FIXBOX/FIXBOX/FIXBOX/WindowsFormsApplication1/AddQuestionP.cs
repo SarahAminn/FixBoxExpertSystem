@@ -109,15 +109,19 @@ namespace FIXBOX
                 SqlCommand Cmd = new SqlCommand("select * from QuestionsPrinters", con);
                 con.Open();
                 SqlDataReader DR = Cmd.ExecuteReader();
-                BindingSource source = new BindingSource();
-                source.DataSource = DR;
-                dataGridView1.DataSource = source;
+                if (DR.HasRows)
+                {
+                    BindingSource source = new BindingSource();
+                    source.DataSource = DR;
+                    dataGridView1.DataSource = source;
+                }
                 con.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            
         }
 
 

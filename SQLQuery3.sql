@@ -2,6 +2,8 @@
 create table Companys(
 Company_Id int IDENTITY not null primary key,
 Company_name varchar(max),
+Company_ErrNMsg bit not null,
+company_WebSearch varchar(max)
 );
 
 create table Printers(
@@ -48,7 +50,9 @@ create table ChoiceSolutions (
 CHSol_Id int IDENTITY not null primary key,
 CHSol_Solution image not null,
 CHSol_Order int not null,
-CHSol_Choice int foreign key references Choices(choice_Id)
+CHSol_Company int not null foreign key references Companys(Company_Id),
+CHSol_Printer int not null foreign key references Printers(printer_Id),
+CHSol_Choice int not null foreign key references Choices(choice_Id)
 );
 
 create table ErrNMsSolutions (

@@ -59,9 +59,8 @@
             this.panel1.Controls.Add(this.button4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(267, 715);
+            this.panel1.Size = new System.Drawing.Size(200, 581);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.About_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.About_MouseMove);
@@ -80,10 +79,10 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::FIXBOX.Properties.Resources.GitHub;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 101);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.button1.Location = new System.Drawing.Point(0, 82);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(267, 57);
+            this.button1.Size = new System.Drawing.Size(200, 46);
             this.button1.TabIndex = 8;
             this.button1.Text = "Github ";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -101,10 +100,10 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Baloo Bhaina", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 626);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.button4.Location = new System.Drawing.Point(0, 509);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(267, 57);
+            this.button4.Size = new System.Drawing.Size(200, 46);
             this.button4.TabIndex = 7;
             this.button4.Text = "Close";
             this.button4.UseVisualStyleBackColor = false;
@@ -115,10 +114,9 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(112)))), ((int)(((byte)(159)))));
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(267, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(200, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1028, 38);
+            this.panel2.Size = new System.Drawing.Size(771, 31);
             this.panel2.TabIndex = 1;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.About_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.About_MouseMove);
@@ -130,10 +128,9 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Right;
             this.label1.Font = new System.Drawing.Font("Baloo Bhaina", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(915, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(682, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 54);
+            this.label1.Size = new System.Drawing.Size(89, 42);
             this.label1.TabIndex = 1;
             this.label1.Text = "FIXBOX";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -143,10 +140,9 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(472, 683);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(354, 555);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(612, 24);
+            this.label2.Size = new System.Drawing.Size(489, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "FIXBOX  is licensed under the GNU General Public License v3.0";
             // 
@@ -162,10 +158,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Baloo Bhaina", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(645, 503);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(484, 409);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(248, 39);
+            this.label3.Size = new System.Drawing.Size(197, 30);
             this.label3.TabIndex = 7;
             this.label3.Text = "Abdelrahman Bahaa Bonna";
             // 
@@ -175,10 +170,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Baloo Bhaina", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(345, 503);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(259, 409);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(175, 39);
+            this.label4.Size = new System.Drawing.Size(138, 30);
             this.label4.TabIndex = 8;
             this.label4.Text = "Sarah Hatem Amin";
             // 
@@ -188,10 +182,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Baloo Bhaina", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(993, 503);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(745, 409);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(229, 39);
+            this.label5.Size = new System.Drawing.Size(183, 30);
             this.label5.TabIndex = 9;
             this.label5.Text = "Samar Mahmoud Abdeen";
             // 
@@ -201,10 +194,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Baloo Bhaina", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(676, 251);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(507, 204);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(208, 48);
+            this.label6.Size = new System.Drawing.Size(164, 39);
             this.label6.TabIndex = 10;
             this.label6.Text = "Developers Team";
             // 
@@ -213,10 +205,9 @@
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Top;
             this.label7.Font = new System.Drawing.Font("Baloo Bhaina", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(267, 38);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(200, 31);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(943, 192);
+            this.label7.Size = new System.Drawing.Size(737, 156);
             this.label7.TabIndex = 11;
             this.label7.Text = resources.GetString("label7.Text");
             // 
@@ -225,10 +216,9 @@
             this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.Image = global::FIXBOX.Properties.Resources.SMA;
-            this.pictureBox5.Location = new System.Drawing.Point(1016, 334);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox5.Location = new System.Drawing.Point(762, 271);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(197, 166);
+            this.pictureBox5.Size = new System.Drawing.Size(148, 135);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 6;
             this.pictureBox5.TabStop = false;
@@ -238,10 +228,9 @@
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.Image = global::FIXBOX.Properties.Resources.SHA;
-            this.pictureBox4.Location = new System.Drawing.Point(339, 334);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Location = new System.Drawing.Point(254, 271);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(197, 166);
+            this.pictureBox4.Size = new System.Drawing.Size(148, 135);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
@@ -251,19 +240,18 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = global::FIXBOX.Properties.Resources.ABK;
-            this.pictureBox3.Location = new System.Drawing.Point(677, 334);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Location = new System.Drawing.Point(508, 271);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(197, 166);
+            this.pictureBox3.Size = new System.Drawing.Size(148, 135);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
             // 
             // About
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1295, 715);
+            this.ClientSize = new System.Drawing.Size(971, 581);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -278,7 +266,6 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "About";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About";

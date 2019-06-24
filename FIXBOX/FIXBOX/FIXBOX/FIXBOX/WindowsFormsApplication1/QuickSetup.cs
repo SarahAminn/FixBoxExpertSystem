@@ -56,13 +56,14 @@ namespace FIXBOX
                 con.Close();
             }
             catch (Exception ex) {
+                con.Close();
                 MessageBox.Show(ex.Message);
             }
         }
 
         private void loadpicturebox() {
             try {
-                cmd = new SqlCommand("select QSP_QSetup from QuickSetupPrinters where QSP_Company='"+co+"' and QSP_IType='"+it+"' and QSP_Order='"+order+"' ", con);
+                cmd = new SqlCommand("select QSP_QSetup from QuickSetupPrinters where QSP_Company='"+co+"' and QSP_IType='"+it+"' and QSP_Order='"+order+"'", con);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();
@@ -75,14 +76,16 @@ namespace FIXBOX
                 }
                 con.Close();
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) {
+                con.Close();
+                MessageBox.Show(ex.Message); }
         
         
         }
 
         private void getMax(){
             try {
-                cmd = new SqlCommand("select MAX(QSP_Order) from QuickSetupPrinters where where QSP_Company='" + co + "' and QSP_IType='" + it + "'", con);
+                cmd = new SqlCommand("select MAX(QSP_Order) from QuickSetupPrinters where QSP_Company='" + co + "' and QSP_IType='" + it + "'", con);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();

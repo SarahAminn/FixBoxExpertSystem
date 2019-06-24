@@ -17,6 +17,7 @@ namespace FIXBOX
         
         int op = Home.op;
         public static string id=null;
+        public static string co, Model;
         SqlConnection con = new SqlConnection();
         public Device()
         {
@@ -73,6 +74,33 @@ namespace FIXBOX
             loadComboBox("select Company_name from Companys", comboBox1);
         }
 
+        public string getvaluefromCompanys(SqlConnection con, String Col)
+        {
+
+            string Val = " ";
+            try
+            {
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from Companys where Company_name='" + comboBox1.SelectedItem.ToString() + "'", con);
+                DataTable dt = new DataTable();
+                con.Open();
+                Cmd_CI.Fill(dt);
+
+                if (dt.Rows.Count == 1)
+                {
+
+                    DataRow row = dt.Rows[0];
+                    Val = row[Col].ToString();
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return Val;
+        }
+
         // Loads Comboboxes
         public void loadComboBox(string query, ComboBox combo)
         {
@@ -94,14 +122,19 @@ namespace FIXBOX
             }
         }
 
-        
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
             
                 if (Home.op == 1)
                 {
-                    id = getvaluefromDB("printer_Id", "Printers", "printer_Company", "printer_model");
+                    
+                        id = getvaluefromDB("printer_Id", "Printers", "printer_Company", "printer_model");
+                        co = getvaluefromCompanys(con, "Company_Id");
+                        Model = textBox1.Text;
+                       
+                    
                 }
             
             if (id != null)
@@ -111,7 +144,7 @@ namespace FIXBOX
                 this.Parent.Controls.Add(DM);
                 DM.Dock = DockStyle.Fill;
                 DM.BringToFront();
-                this.Hide();
+                
             }
         }
     }

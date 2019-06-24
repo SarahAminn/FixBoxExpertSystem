@@ -21,7 +21,86 @@ namespace FIXBOX
         {
             InitializeComponent();
             con.ConnectionString = "data source = (local);database = FIXBOX;integrated security = SSPI";
+            cbPrinters.Enabled = false;
+
         }
+
+        // Loads Comboboxes
+        public void loadComboBox(string query, ComboBox combo)
+        {
+            combo.Items.Clear();
+            try
+            {
+                SqlCommand cmd_InsertIntoCombo = new SqlCommand(query, con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd_InsertIntoCombo);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                {
+                    combo.Items.Add(ds.Tables[0].Rows[i][0]);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public string getvaluefromCompanys( SqlConnection con, String Col)
+        {
+
+            string Val = " ";
+            try
+            {
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select "+Col+" from Companys where Company_name='"+cbCo.SelectedItem.ToString()+"'", con);
+                DataTable dt = new DataTable();
+                con.Open();
+                Cmd_CI.Fill(dt);
+
+                if (dt.Rows.Count == 1)
+                {
+
+                    DataRow row = dt.Rows[0];
+                    Val = row[Col].ToString();
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return Val;
+        }
+
+        public string getvaluefromPrinters(SqlConnection con, String Col)
+        {
+
+            string Val = " ";
+            try
+            {
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from Printers where printer_model='" + cbPrinters.SelectedItem.ToString() + "'", con);
+                DataTable dt = new DataTable();
+                con.Open();
+                Cmd_CI.Fill(dt);
+
+                if (dt.Rows.Count == 1)
+                {
+
+                    DataRow row = dt.Rows[0];
+                    Val = row[Col].ToString();
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return Val;
+        }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -57,6 +136,10 @@ namespace FIXBOX
         {
             tbOrder.Clear();
             pictureBox_Sol.Image = null;
+            cbCo.Text = null;
+            cbPrinters.Text = null;
+            loadComboBox("select Company_name from Companys", cbCo);
+            
         }
 
         private void btnBrowse_Click(object sender, EventArgs e)
@@ -88,11 +171,11 @@ namespace FIXBOX
                 FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read);
                 BinaryReader br = new BinaryReader(fs);
                 img = br.ReadBytes((int)fs.Length);
-                String query = "insert into ChoiceSolutions(CHSol_Order,CHSol_Choice,CHSol_Solution) values('" + tbOrder + "'," + id + ",@img)";
+                String query = "insert into ChoiceSolutions(CHSol_Order,CHSol_Choice,CHSol_Printer,CHSol_Company,CHSol_Solution) values('" + tbOrder.Text + "'," + id + ",'"+getvaluefromPrinters(con,"printer_Id")+"','"+getvaluefromCompanys(con,"Company_Id")+"',@img)";
                 if (con.State != ConnectionState.Open)
                     con.Open();
                 SqlCommand command = new SqlCommand(query, con);
-                command.Parameters.Add("@img", img);
+                command.Parameters.AddWithValue("@img", img);
                 int x = command.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show(x.ToString() + " record(s) saved.");
@@ -100,6 +183,12 @@ namespace FIXBOX
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void cbCo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbPrinters.Enabled = true;
+            loadComboBox("select printer_model from Printers where printer_Company = '" + getvaluefromCompanys(con, "Company_Id") + "'", cbPrinters);
         }
 
     }

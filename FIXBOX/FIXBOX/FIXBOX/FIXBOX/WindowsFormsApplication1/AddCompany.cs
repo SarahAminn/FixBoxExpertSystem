@@ -31,9 +31,12 @@ namespace FIXBOX
                 SqlCommand Cmd = new SqlCommand("select * from Companys", con);
                 con.Open();
                 SqlDataReader DR = Cmd.ExecuteReader();
-                BindingSource source = new BindingSource();
-                source.DataSource = DR;
-                dataGridView1.DataSource = source;
+                if (DR.HasRows)
+                {
+                    BindingSource source = new BindingSource();
+                    source.DataSource = DR;
+                    dataGridView1.DataSource = source;
+                }
                 con.Close();
             }
             catch (Exception ex) {
@@ -44,6 +47,8 @@ namespace FIXBOX
         private void btnClear_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
+            textBox2.Clear();
+            checkBox1.Checked = false;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -66,7 +71,7 @@ namespace FIXBOX
         {
             try
             {
-                SqlCommand cmd_insert = new SqlCommand("insert into Companys(Company_name) values('"+textBox1.Text+"')", con);
+                SqlCommand cmd_insert = new SqlCommand("insert into Companys(Company_name,Company_ErrNMsg,company_WebSearch) values('"+textBox1.Text+"','"+checkBox1.Checked+"','"+textBox2.Text+"')", con);
                 if(con.State!=ConnectionState.Open)
                     con.Open();
                 cmd_insert.ExecuteNonQuery();

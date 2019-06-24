@@ -189,7 +189,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 32);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1295, 540);
+            this.pictureBox1.Size = new System.Drawing.Size(1295, 665);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -199,7 +199,7 @@
             this.addPrinter1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.addPrinter1.Location = new System.Drawing.Point(0, 0);
             this.addPrinter1.Name = "addPrinter1";
-            this.addPrinter1.Size = new System.Drawing.Size(1295, 572);
+            this.addPrinter1.Size = new System.Drawing.Size(1295, 697);
             this.addPrinter1.TabIndex = 2;
             // 
             // addCompany1
@@ -208,7 +208,7 @@
             this.addCompany1.Location = new System.Drawing.Point(0, 0);
             this.addCompany1.Margin = new System.Windows.Forms.Padding(4);
             this.addCompany1.Name = "addCompany1";
-            this.addCompany1.Size = new System.Drawing.Size(1295, 572);
+            this.addCompany1.Size = new System.Drawing.Size(1295, 697);
             this.addCompany1.TabIndex = 3;
             // 
             // addCodeOrMsg1
@@ -217,7 +217,7 @@
             this.addCodeOrMsg1.Location = new System.Drawing.Point(0, 0);
             this.addCodeOrMsg1.Margin = new System.Windows.Forms.Padding(4);
             this.addCodeOrMsg1.Name = "addCodeOrMsg1";
-            this.addCodeOrMsg1.Size = new System.Drawing.Size(1295, 572);
+            this.addCodeOrMsg1.Size = new System.Drawing.Size(1295, 697);
             this.addCodeOrMsg1.TabIndex = 4;
             // 
             // addQuestionP1
@@ -226,7 +226,7 @@
             this.addQuestionP1.Location = new System.Drawing.Point(0, 0);
             this.addQuestionP1.Margin = new System.Windows.Forms.Padding(4);
             this.addQuestionP1.Name = "addQuestionP1";
-            this.addQuestionP1.Size = new System.Drawing.Size(1295, 572);
+            this.addQuestionP1.Size = new System.Drawing.Size(1295, 697);
             this.addQuestionP1.TabIndex = 5;
             // 
             // addQSetup1
@@ -235,14 +235,14 @@
             this.addQSetup1.Location = new System.Drawing.Point(0, 0);
             this.addQSetup1.Margin = new System.Windows.Forms.Padding(4);
             this.addQSetup1.Name = "addQSetup1";
-            this.addQSetup1.Size = new System.Drawing.Size(1295, 572);
+            this.addQSetup1.Size = new System.Drawing.Size(1295, 697);
             this.addQSetup1.TabIndex = 6;
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1295, 572);
+            this.ClientSize = new System.Drawing.Size(1295, 697);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.addPrinter1);
