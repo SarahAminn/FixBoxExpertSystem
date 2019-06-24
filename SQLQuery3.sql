@@ -32,11 +32,23 @@ PENM_IType varchar(max) not null
 create table QuestionsPrinters (
 QPrinters_Id int IDENTITY not null primary key,
 QPrinters_Question varchar(max) not null,
-QPrinters_Answer varchar(max) not null ,
 QPrinters_Type varchar(max) not null,
 QPrinters_Order int not null,
 QPrinters_IType varchar(max) not null,
 QPrinters_QType varchar(max) not null
+);
+
+create table Choices (
+choice_Id int IDENTITY primary key not null,
+choice_ch varchar(max) not null,
+choice_Question int not null foreign key references QuestionsPrinters(QPrinters_Id)
+);
+
+create table ChoiceSolutions (
+CHSol_Id int IDENTITY not null primary key,
+CHSol_Solution image not null,
+CHSol_Order int not null,
+CHSol_Choice int foreign key references Choices(choice_Id)
 );
 
 create table ErrNMsSolutions (
