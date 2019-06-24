@@ -149,7 +149,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(301, 30);
             this.button5.TabIndex = 10;
-            this.button5.Text = "button5";
+            this.button5.Text = "Add Solution";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // AddChoice
