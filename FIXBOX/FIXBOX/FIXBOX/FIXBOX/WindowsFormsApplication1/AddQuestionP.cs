@@ -79,7 +79,7 @@ namespace FIXBOX
             string Val = " ";
             try
             {
-                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select "+Col+" from QuestionsPrinters where QPrinters_Question='" + tbQuestion.Text + "'and QPrinters_Type='" + tbType.Text + "'and QPrinters_Order='" + tbOrder.Text + "'and QPrinters_IType='" + tbIT.Text + "'and QPrinters_QType='" + tbQType.Text + "'and QPrinters_Answer='" + tbAnswer.Text + "'", con);
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select "+Col+" from QuestionsPrinters where QPrinters_Question='" + tbQuestion.Text + "'and QPrinters_Type='" + tbType.Text + "'and QPrinters_Order='" + tbOrder.Text + "'and QPrinters_IType='" + tbIT.Text + "'and QPrinters_QType='" + tbQType.Text + "'", con);
                 DataTable dt = new DataTable();
                 con.Open();
                 Cmd_CI.Fill(dt);
@@ -138,9 +138,10 @@ namespace FIXBOX
 
         private void btnBrowse_Click(object sender, EventArgs e)
         {
-            AddQPSolutions s = new AddQPSolutions();
-            this.Controls.Add(s);
-            s.BringToFront();
+            AddChoice AC = new AddChoice();
+            this.Parent.Controls.Add(AC);
+            AC.Dock = DockStyle.Fill;
+            AC.BringToFront();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -150,7 +151,7 @@ namespace FIXBOX
             tbQuestion.Clear();
             tbType.Clear();
             tbQType.Clear();
-            tbAnswer.Clear();
+            
             cbDelete.ResetText();
            
            
@@ -178,7 +179,7 @@ namespace FIXBOX
             try
             {
 
-                String query = "insert into QuestionsPrinters(QPrinters_Question,QPrinters_Type,QPrinters_Order,QPrinters_IType,QPrinters_QType,QPrinters_Answer) values('" + tbQuestion.Text + "','" + tbType.Text + "','" + tbOrder.Text + "','" + tbIT.Text + "','" + tbQType.Text + "','"+tbAnswer.Text+"')";
+                String query = "insert into QuestionsPrinters(QPrinters_Question,QPrinters_Type,QPrinters_Order,QPrinters_IType,QPrinters_QType) values('" + tbQuestion.Text + "','" + tbType.Text + "','" + tbOrder.Text + "','" + tbIT.Text + "','" + tbQType.Text + "')";
                 if (con.State != ConnectionState.Open)
                     con.Open();
                 SqlCommand command = new SqlCommand(query, con);
@@ -186,8 +187,7 @@ namespace FIXBOX
                 int x = command.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show(x.ToString() + " record(s) saved.");
-                AddQPSolutions.id = getvaluefromDB(con, "QPrinters_Id");
-                MessageBox.Show(AddQPSolutions.id);
+                
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }

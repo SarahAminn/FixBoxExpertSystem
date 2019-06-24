@@ -43,8 +43,6 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.tbAnswer = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.tbQType = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tbIT = new System.Windows.Forms.TextBox();
@@ -223,8 +221,6 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.tbAnswer);
-            this.panel8.Controls.Add(this.label6);
             this.panel8.Controls.Add(this.tbQType);
             this.panel8.Controls.Add(this.label7);
             this.panel8.Controls.Add(this.tbIT);
@@ -242,26 +238,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(322, 259);
             this.panel8.TabIndex = 7;
-            // 
-            // tbAnswer
-            // 
-            this.tbAnswer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbAnswer.Location = new System.Drawing.Point(0, 217);
-            this.tbAnswer.Margin = new System.Windows.Forms.Padding(2);
-            this.tbAnswer.Name = "tbAnswer";
-            this.tbAnswer.Size = new System.Drawing.Size(322, 23);
-            this.tbAnswer.TabIndex = 11;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.Location = new System.Drawing.Point(0, 200);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 17);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Answer:";
             // 
             // tbQType
             // 
@@ -468,8 +444,6 @@
         private System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.TextBox tbQType;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox tbAnswer;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnRefresh;
     }
 }
