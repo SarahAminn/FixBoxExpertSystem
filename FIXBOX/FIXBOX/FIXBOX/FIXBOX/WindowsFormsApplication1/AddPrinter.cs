@@ -27,6 +27,7 @@ namespace FIXBOX
         // Loads Comboboxes
         public void loadComboBox(string query, ComboBox combo)
         {
+            combo.Items.Clear();
             try
             {
                 SqlCommand cmd_InsertIntoCombo = new SqlCommand(query, con);
@@ -81,7 +82,7 @@ namespace FIXBOX
             tbIType.Clear();
             tbModel.Clear();
             tbPType.Clear();
-            comboBox1.ResetText();
+            comboBox1.Text = null;
             pictureBox_Img.Image = null;
             pictureBox_Img.Refresh();
             imgLoc = null;

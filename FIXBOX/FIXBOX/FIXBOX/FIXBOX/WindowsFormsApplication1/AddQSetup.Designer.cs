@@ -33,6 +33,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.cbDelete = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,16 +53,14 @@
             this.pictureBox_QS = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_QS)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -110,6 +110,26 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(923, 170);
             this.panel5.TabIndex = 4;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.btnRefresh);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel10.Location = new System.Drawing.Point(592, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(181, 170);
+            this.panel10.TabIndex = 1;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRefresh.Location = new System.Drawing.Point(0, 0);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(181, 36);
+            this.btnRefresh.TabIndex = 0;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // panel8
             // 
@@ -318,26 +338,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(421, 256);
             this.dataGridView1.TabIndex = 0;
             // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.btnRefresh);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Location = new System.Drawing.Point(592, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(181, 170);
-            this.panel10.TabIndex = 1;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRefresh.Location = new System.Drawing.Point(0, 0);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(181, 36);
-            this.btnRefresh.TabIndex = 0;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
             // AddQSetup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -353,6 +353,7 @@
             this.Name = "AddQSetup";
             this.Size = new System.Drawing.Size(981, 486);
             this.panel5.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -361,7 +362,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_QS)).EndInit();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel10.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -35,19 +35,19 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btnSave = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.btnClear = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel6.SuspendLayout();
@@ -125,20 +125,6 @@
             this.panel6.Size = new System.Drawing.Size(671, 81);
             this.panel6.TabIndex = 5;
             // 
-            // btnSave
-            // 
-            this.btnSave.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(150, 77);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(371, 35);
-            this.btnSave.TabIndex = 4;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // panel13
             // 
             this.panel13.Dock = System.Windows.Forms.DockStyle.Right;
@@ -148,20 +134,6 @@
             this.panel13.Size = new System.Drawing.Size(191, 35);
             this.panel13.TabIndex = 3;
             // 
-            // btnClear
-            // 
-            this.btnClear.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(150, 112);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(371, 35);
-            this.btnClear.TabIndex = 0;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
             // panel12
             // 
             this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
@@ -170,20 +142,6 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(184, 35);
             this.panel12.TabIndex = 2;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(150, 42);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(371, 35);
-            this.btnDelete.TabIndex = 0;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // panel11
             // 
@@ -203,6 +161,48 @@
             this.panel10.Size = new System.Drawing.Size(671, 29);
             this.panel10.TabIndex = 0;
             // 
+            // btnSave
+            // 
+            this.btnSave.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(150, 77);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(371, 35);
+            this.btnSave.TabIndex = 4;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(150, 112);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(371, 35);
+            this.btnClear.TabIndex = 0;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(150, 42);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(371, 35);
+            this.btnDelete.TabIndex = 0;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.btnRefresh);
@@ -220,6 +220,20 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(671, 208);
             this.panel7.TabIndex = 6;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Location = new System.Drawing.Point(150, 147);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(371, 35);
+            this.btnRefresh.TabIndex = 5;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // textBox1
             // 
@@ -258,20 +272,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(150, 208);
             this.panel8.TabIndex = 0;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(150, 147);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(371, 35);
-            this.btnRefresh.TabIndex = 5;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // AddCompany
             // 

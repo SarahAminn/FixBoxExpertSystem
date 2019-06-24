@@ -30,6 +30,8 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // panel1
@@ -48,10 +50,28 @@
             this.panel2.Size = new System.Drawing.Size(657, 30);
             this.panel2.TabIndex = 1;
             // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 30);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(31, 395);
+            this.panel3.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(627, 30);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(30, 395);
+            this.panel4.TabIndex = 3;
+            // 
             // Questions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Questions";
@@ -65,5 +85,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
     }
 }
