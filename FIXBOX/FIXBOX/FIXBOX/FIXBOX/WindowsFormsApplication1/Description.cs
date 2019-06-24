@@ -44,7 +44,7 @@ namespace FIXBOX
                     {
                         DataRow row = dt.Rows[0];
                         string Decs = row["printer_Desc"].ToString();
-                        richTextBox1.Text = Decs.Replace("\\\\n", Environment.NewLine);
+                        richTextBox1.Text = Decs;
                     }
                 }
                 catch (Exception ex) { MessageBox.Show(ex.Message); }
