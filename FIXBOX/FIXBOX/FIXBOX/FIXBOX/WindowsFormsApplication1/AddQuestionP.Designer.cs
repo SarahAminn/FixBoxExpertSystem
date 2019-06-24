@@ -142,7 +142,7 @@
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(164, 32);
             this.btnBrowse.TabIndex = 1;
-            this.btnBrowse.Text = "Add Solution";
+            this.btnBrowse.Text = "Add Choice";
             this.btnBrowse.UseVisualStyleBackColor = true;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 

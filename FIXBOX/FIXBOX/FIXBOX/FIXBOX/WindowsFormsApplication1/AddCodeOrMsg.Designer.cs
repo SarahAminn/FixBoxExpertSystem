@@ -43,6 +43,7 @@
             this.btnAddSol = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.cbDelete = new System.Windows.Forms.ComboBox();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -53,7 +54,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbCodeMsg = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel6.SuspendLayout();
@@ -224,6 +224,17 @@
             this.panel8.Size = new System.Drawing.Size(150, 163);
             this.panel8.TabIndex = 7;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRefresh.Location = new System.Drawing.Point(0, 0);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(150, 30);
+            this.btnRefresh.TabIndex = 2;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -332,17 +343,6 @@
             this.label1.Size = new System.Drawing.Size(126, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Code Or Message:";
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRefresh.Location = new System.Drawing.Point(0, 0);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(150, 30);
-            this.btnRefresh.TabIndex = 2;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // AddCodeOrMsg
             // 

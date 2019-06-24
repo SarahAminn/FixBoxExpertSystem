@@ -33,8 +33,8 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.btnClear = new System.Windows.Forms.Button();
-            this.btnBrowse = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.btnBrowse = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
             this.pictureBox_Img = new System.Windows.Forms.PictureBox();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -104,17 +104,6 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // btnBrowse
-            // 
-            this.btnBrowse.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnBrowse.Location = new System.Drawing.Point(0, 456);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(308, 39);
-            this.btnBrowse.TabIndex = 2;
-            this.btnBrowse.Text = "Browse";
-            this.btnBrowse.UseVisualStyleBackColor = true;
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
-            // 
             // btnSave
             // 
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -125,6 +114,17 @@
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnBrowse.Location = new System.Drawing.Point(0, 456);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(308, 39);
+            this.btnBrowse.TabIndex = 2;
+            this.btnBrowse.Text = "Browse";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // panel17
             // 

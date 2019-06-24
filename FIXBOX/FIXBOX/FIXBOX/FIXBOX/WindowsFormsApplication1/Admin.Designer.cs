@@ -118,7 +118,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(124, 30);
+            this.textBox1.Size = new System.Drawing.Size(124, 26);
             this.textBox1.TabIndex = 4;
             // 
             // button4
@@ -233,14 +233,14 @@
             // 
             this.addQSetup1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.addQSetup1.Location = new System.Drawing.Point(0, 0);
-            this.addQSetup1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addQSetup1.Margin = new System.Windows.Forms.Padding(4);
             this.addQSetup1.Name = "addQSetup1";
             this.addQSetup1.Size = new System.Drawing.Size(1295, 572);
             this.addQSetup1.TabIndex = 6;
             // 
             // Admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1295, 572);
             this.Controls.Add(this.pictureBox1);
@@ -256,7 +256,6 @@
             this.Name = "Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Admin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

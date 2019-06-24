@@ -75,6 +75,12 @@
     <Compile Include="AddChoice.Designer.cs">
       <DependentUpon>AddChoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddChoiceSolution.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddChoiceSolution.Designer.cs">
+      <DependentUpon>AddChoiceSolution.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddCodeOrMsg.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddChoice.resx">
       <DependentUpon>AddChoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddChoiceSolution.resx">
+      <DependentUpon>AddChoiceSolution.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddCodeOrMsg.resx">
       <DependentUpon>AddCodeOrMsg.cs</DependentUpon>

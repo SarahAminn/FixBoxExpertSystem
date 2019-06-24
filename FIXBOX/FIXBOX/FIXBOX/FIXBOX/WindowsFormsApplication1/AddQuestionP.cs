@@ -28,6 +28,7 @@ namespace FIXBOX
         // Loads Comboboxes
         public void loadComboBox(string query, ComboBox combo)
         {
+            combo.Items.Clear();
             try
             {
                 SqlCommand cmd_InsertIntoCombo = new SqlCommand(query, con);
@@ -140,7 +141,7 @@ namespace FIXBOX
         {
             AddChoice AC = new AddChoice();
             this.Parent.Controls.Add(AC);
-            AC.Dock = DockStyle.Fill;
+           
             AC.BringToFront();
         }
 
@@ -151,8 +152,8 @@ namespace FIXBOX
             tbQuestion.Clear();
             tbType.Clear();
             tbQType.Clear();
-            
-            cbDelete.ResetText();
+
+            cbDelete.Text = "";
            
            
         }
@@ -187,7 +188,7 @@ namespace FIXBOX
                 int x = command.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show(x.ToString() + " record(s) saved.");
-                
+                AddChoice.id = getvaluefromDB(con,"QPrinters_Id");
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
@@ -196,6 +197,7 @@ namespace FIXBOX
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadTable(dataGridView1);
+            loadComboBox("select QPrinters_Id from QuestionsPrinters", cbDelete);
         }
     }
 }

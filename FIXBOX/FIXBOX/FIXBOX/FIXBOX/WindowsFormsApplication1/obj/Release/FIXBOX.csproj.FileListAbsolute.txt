@@ -42,7 +42,6 @@ C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\W
 C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.pdb
 C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\bin\Release\FIXBOX.exe
 C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\bin\Release\FIXBOX.pdb
-C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.csprojResolveAssemblyReference.cache
 C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.About.resources
 C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.AddCodeOrMsg.resources
 C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.AddCompany.resources
@@ -56,7 +55,8 @@ C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\W
 C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.Home.resources
 C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.Properties.Resources.resources
 C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.csproj.GenerateResource.Cache
-C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.AddQPSolutions.resources
 C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.Description.resources
 C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.QuickSetup.resources
 C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.Questions.resources
+C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.AddChoice.resources
+C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.AddChoiceSolution.resources
