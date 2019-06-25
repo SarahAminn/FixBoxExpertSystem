@@ -20,6 +20,7 @@ namespace FIXBOX
         {
             InitializeComponent();
             con.ConnectionString = "data source = (local);database = FIXBOX;integrated security = SSPI";
+            cbPrinter.Enabled = false;
             loadComboBox("select Company_name from Companys", cbCo);
             loadComboBox("select QSP_Id from QuickSetupPrinters", cbDelete);
             LoadTable(dataGridView1);
@@ -125,6 +126,7 @@ namespace FIXBOX
             tbIType.Clear();
             tbOrder.Clear();
             cbCo.Text = null;
+            cbPrinter.Text = null;
             imgLoc = null;
             pictureBox_QS.Image = null;
             pictureBox_QS.Refresh();
@@ -155,7 +157,7 @@ namespace FIXBOX
                 FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read);
                 BinaryReader br = new BinaryReader(fs);
                 img = br.ReadBytes((int)fs.Length);
-                String query = "insert into QuickSetupPrinters(QSP_IType,QSP_Order,QSP_Company,QSP_QSetup) values('"+tbIType.Text+"',"+tbOrder.Text+",'"+getvaluefromDB("Company_Id","Company_name","Companys",con,cbCo)+"',@img)";
+                String query = "insert into QuickSetupPrinters(QSP_IType,QSP_Order,QSP_Company,QSP_Printer,QSP_QSetup) values('"+tbIType.Text+"',"+tbOrder.Text+",'"+getvaluefromDB("Company_Id","Company_name","Companys",con,cbCo)+"','"+getvaluefromPrinters(con,"printer_Id")+"',@img)";
                 if (con.State != ConnectionState.Open)
                     con.Open();
                 SqlCommand command = new SqlCommand(query, con);
@@ -172,6 +174,66 @@ namespace FIXBOX
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadTable(dataGridView1);
+        }
+
+        public string getvaluefromPrinters(SqlConnection con, String Col)
+        {
+
+            string Val = " ";
+            try
+            {
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from Printers where printer_model='" + cbPrinter.SelectedItem.ToString() + "'", con);
+                DataTable dt = new DataTable();
+                con.Open();
+                Cmd_CI.Fill(dt);
+
+                if (dt.Rows.Count == 1)
+                {
+
+                    DataRow row = dt.Rows[0];
+                    Val = row[Col].ToString();
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return Val;
+        }
+
+        public string getvaluefromCompanys(SqlConnection con, String Col)
+        {
+
+            string Val = " ";
+            try
+            {
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from Companys where Company_name='" + cbCo.SelectedItem.ToString() + "'", con);
+                DataTable dt = new DataTable();
+                con.Open();
+                Cmd_CI.Fill(dt);
+
+                if (dt.Rows.Count == 1)
+                {
+
+                    DataRow row = dt.Rows[0];
+                    Val = row[Col].ToString();
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return Val;
+        }
+
+        private void cbCo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbPrinter.Enabled = true;
+            loadComboBox("select printer_model from Printers where printer_Company = '" + getvaluefromCompanys(con, "Company_Id") + "'", cbPrinter);
         }
     }
 }

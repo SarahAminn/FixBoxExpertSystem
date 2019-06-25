@@ -22,6 +22,7 @@ QSP_QSetup image not null,
 QSP_Company int not null foreign key references Companys(Company_Id),
 QSP_Order int not null,
 QSP_IType varchar(max) not null,
+QSP_Printer int not null foreign key references Printers(printer_Id)
 );
 
 create table PrintersErrNMsg (
@@ -63,3 +64,10 @@ ErrSols_CodeOMsg int Foreign key references PrintersErrNMsg (PENM_Id)
 
 );
 
+create table QuestionsSolutions (
+QS_Id int IDENTITY not null primary key ,
+QS_Solution image not null ,
+QS_Order int not null ,
+QS_Question int Foreign key references QuestionsPrinters (QPrinters_Id)
+
+);
