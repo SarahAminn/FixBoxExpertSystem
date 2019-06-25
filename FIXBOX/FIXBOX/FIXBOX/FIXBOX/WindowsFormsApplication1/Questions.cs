@@ -12,6 +12,7 @@ namespace FIXBOX
 {
     public partial class Questions : UserControl
     {
+        public static string operation;
         public Questions()
         {
             InitializeComponent();
@@ -29,6 +30,15 @@ namespace FIXBOX
             DV.Dock = DockStyle.Fill;
             DV.BringToFront();
             this.Hide();
+        }
+
+        private void btnMsgOrCode_Click(object sender, EventArgs e)
+        {
+            ErrorsNMessages Err = new ErrorsNMessages();
+            this.Parent.Controls.Add(Err);
+            Err.Dock = DockStyle.Fill;
+            Err.BringToFront();
+
         }
     }
 }

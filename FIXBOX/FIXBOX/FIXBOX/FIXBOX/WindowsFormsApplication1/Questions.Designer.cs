@@ -129,6 +129,7 @@
             this.btnMsgOrCode.TabIndex = 8;
             this.btnMsgOrCode.Text = "Error Message Or Code Appeared";
             this.btnMsgOrCode.UseVisualStyleBackColor = false;
+            this.btnMsgOrCode.Click += new System.EventHandler(this.btnMsgOrCode_Click);
             // 
             // btnNoAct
             // 

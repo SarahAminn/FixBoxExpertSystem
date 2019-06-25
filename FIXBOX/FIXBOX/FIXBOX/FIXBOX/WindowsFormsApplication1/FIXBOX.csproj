@@ -141,6 +141,12 @@
     <Compile Include="DeviceMain.Designer.cs">
       <DependentUpon>DeviceMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="ErrorsNMessages.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ErrorsNMessages.Designer.cs">
+      <DependentUpon>ErrorsNMessages.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DeviceMain.resx">
       <DependentUpon>DeviceMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorsNMessages.resx">
+      <DependentUpon>ErrorsNMessages.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

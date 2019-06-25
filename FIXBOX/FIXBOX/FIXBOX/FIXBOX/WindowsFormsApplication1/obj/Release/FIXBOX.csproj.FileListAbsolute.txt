@@ -61,3 +61,4 @@ C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\W
 C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.AddChoice.resources
 C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.AddChoiceSolution.resources
 C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.csprojResolveAssemblyReference.cache
+C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.ErrorsNMessages.resources
