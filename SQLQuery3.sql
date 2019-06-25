@@ -53,7 +53,7 @@ CHSol_Solution image not null,
 CHSol_Order int not null,
 CHSol_Company int not null foreign key references Companys(Company_Id),
 CHSol_Printer int not null foreign key references Printers(printer_Id),
-CHSol_Choice int not null foreign key references Choices(choice_Id)
+CHSol_Choice int foreign key references Choices(choice_Id)
 );
 
 create table ErrNMsSolutions (

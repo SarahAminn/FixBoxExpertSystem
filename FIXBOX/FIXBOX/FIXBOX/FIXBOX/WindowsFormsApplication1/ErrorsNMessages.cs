@@ -35,7 +35,13 @@ namespace FIXBOX
 
         private void btnSolution_Click(object sender, EventArgs e)
         {
+            try
+            {
 
+
+
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
     }
 }
