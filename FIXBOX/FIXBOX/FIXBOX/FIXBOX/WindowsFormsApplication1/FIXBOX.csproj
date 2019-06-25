@@ -48,7 +48,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>8478.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -280,7 +281,6 @@
     <None Include="Resources\imac.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="8478.ico" />
     <None Include="Resources\8478edit.png" />
     <None Include="Resources\Untitled-1.png" />
     <None Include="Resources\team.png" />
