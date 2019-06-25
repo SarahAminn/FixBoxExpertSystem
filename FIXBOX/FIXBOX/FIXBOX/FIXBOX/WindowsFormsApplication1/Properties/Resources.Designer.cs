@@ -63,6 +63,16 @@ namespace FIXBOX.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _8478edit {
+            get {
+                object obj = ResourceManager.GetObject("8478edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ABK {
             get {
                 object obj = ResourceManager.GetObject("ABK", resourceCulture);
@@ -86,16 +96,6 @@ namespace FIXBOX.Properties {
         internal static System.Drawing.Bitmap imac {
             get {
                 object obj = ResourceManager.GetObject("imac", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap logo {
-            get {
-                object obj = ResourceManager.GetObject("logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

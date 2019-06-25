@@ -185,7 +185,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::FIXBOX.Properties.Resources.logo;
+            this.pictureBox1.Image = global::FIXBOX.Properties.Resources._8478edit;
             this.pictureBox1.Location = new System.Drawing.Point(0, 32);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";

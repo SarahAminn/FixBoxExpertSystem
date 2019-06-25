@@ -242,9 +242,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\8478.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\GitHub-Mark-64px.png" />
   </ItemGroup>
   <ItemGroup>
@@ -284,6 +281,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="8478.ico" />
+    <None Include="Resources\8478edit.png" />
     <None Include="Resources\Untitled-1.png" />
     <None Include="Resources\team.png" />
     <None Include="Resources\man.png" />
