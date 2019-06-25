@@ -94,6 +94,7 @@ namespace FIXBOX
             }
             catch (Exception ex)
             {
+                con.Close();
                 MessageBox.Show(ex.Message);
             }
         }

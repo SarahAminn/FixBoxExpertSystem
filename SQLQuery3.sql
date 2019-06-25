@@ -63,10 +63,3 @@ ErrSols_CodeOMsg int Foreign key references PrintersErrNMsg (PENM_Id)
 
 );
 
-create table QuestionsSolutions (
-QS_Id int IDENTITY not null primary key ,
-QS_Solution image not null ,
-QS_Order int not null ,
-QS_Question int Foreign key references QuestionsPrinters (QPrinters_Id)
-
-);

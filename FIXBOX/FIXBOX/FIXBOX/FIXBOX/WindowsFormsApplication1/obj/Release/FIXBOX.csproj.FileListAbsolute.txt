@@ -62,3 +62,28 @@ C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\W
 C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.AddChoiceSolution.resources
 C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.csprojResolveAssemblyReference.cache
 C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.ErrorsNMessages.resources
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\bin\Release\FIXBOX.exe.config
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.exe
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.pdb
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\bin\Release\FIXBOX.exe
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\bin\Release\FIXBOX.pdb
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.csprojResolveAssemblyReference.cache
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.About.resources
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.AddChoice.resources
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.AddChoiceSolution.resources
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.AddCodeOrMsg.resources
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.AddCompany.resources
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.AddErrNMsgSolutions.resources
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.AddPrinter.resources
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.AddQSetup.resources
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.AddQuestionP.resources
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.Admin.resources
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.Description.resources
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.Device.resources
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.DeviceMain.resources
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.ErrorsNMessages.resources
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.Home.resources
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.Properties.Resources.resources
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.QuickSetup.resources
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.Questions.resources
+C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.csproj.GenerateResource.Cache
