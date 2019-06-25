@@ -45,8 +45,8 @@ namespace FIXBOX
                     Coid = row["Company_Id"].ToString();
                 }
                 con.Close();
-
-                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select "+WantedCol+" from "+TableName+" where "+CompanyCol+"='"+Coid+"'and "+ModelCol+"='"+textBox1.Text+"'", con);
+                string Mod = textBox1.Text;
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select "+WantedCol+" from "+TableName+" where "+CompanyCol+"='"+Coid+"'and "+ModelCol+"='"+Mod.ToUpper()+"'", con);
                 DataTable dt = new DataTable();
                 con.Open();
                 Cmd_CI.Fill(dt);
@@ -132,7 +132,8 @@ namespace FIXBOX
                     
                         id = getvaluefromDB("printer_Id", "Printers", "printer_Company", "printer_model");
                         co = getvaluefromCompanys(con, "Company_Id");
-                        Model = textBox1.Text;
+                        string Mod = textBox1.Text;
+                        Model = Mod.ToUpper();
                        
                     
                 }
