@@ -42,6 +42,8 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.cbPrinter = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.tbIType = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbOrder = new System.Windows.Forms.TextBox();
@@ -53,8 +55,6 @@
             this.pictureBox_QS = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbPrinter = new System.Windows.Forms.ComboBox();
             this.panel5.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -69,7 +69,7 @@
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(32, 486);
             this.panel1.TabIndex = 0;
@@ -78,7 +78,7 @@
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(955, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(26, 486);
             this.panel2.TabIndex = 1;
@@ -87,7 +87,7 @@
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(32, 454);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(923, 32);
             this.panel3.TabIndex = 2;
@@ -96,7 +96,7 @@
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(32, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(923, 28);
             this.panel4.TabIndex = 3;
@@ -108,7 +108,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel5.Location = new System.Drawing.Point(32, 284);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(923, 170);
             this.panel5.TabIndex = 4;
@@ -142,7 +142,7 @@
             this.panel8.Controls.Add(this.btnSave);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel8.Location = new System.Drawing.Point(773, 0);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(150, 170);
             this.panel8.TabIndex = 0;
@@ -153,7 +153,7 @@
             this.cbDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDelete.FormattingEnabled = true;
             this.cbDelete.Location = new System.Drawing.Point(0, 20);
-            this.cbDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbDelete.Margin = new System.Windows.Forms.Padding(2);
             this.cbDelete.Name = "cbDelete";
             this.cbDelete.Size = new System.Drawing.Size(150, 28);
             this.cbDelete.TabIndex = 4;
@@ -173,7 +173,7 @@
             // 
             this.btnDelete.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnDelete.Location = new System.Drawing.Point(0, 97);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(150, 24);
             this.btnDelete.TabIndex = 2;
@@ -185,7 +185,7 @@
             // 
             this.btnClear.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnClear.Location = new System.Drawing.Point(0, 121);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(150, 25);
             this.btnClear.TabIndex = 1;
@@ -197,7 +197,7 @@
             // 
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnSave.Location = new System.Drawing.Point(0, 146);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(150, 24);
             this.btnSave.TabIndex = 0;
@@ -219,16 +219,36 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel6.Location = new System.Drawing.Point(32, 28);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(502, 256);
             this.panel6.TabIndex = 5;
+            // 
+            // cbPrinter
+            // 
+            this.cbPrinter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbPrinter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPrinter.FormattingEnabled = true;
+            this.cbPrinter.Location = new System.Drawing.Point(254, 160);
+            this.cbPrinter.Name = "cbPrinter";
+            this.cbPrinter.Size = new System.Drawing.Size(248, 28);
+            this.cbPrinter.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label5.Location = new System.Drawing.Point(254, 140);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 20);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Printer:";
             // 
             // tbIType
             // 
             this.tbIType.Dock = System.Windows.Forms.DockStyle.Top;
             this.tbIType.Location = new System.Drawing.Point(254, 114);
-            this.tbIType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbIType.Margin = new System.Windows.Forms.Padding(2);
             this.tbIType.Name = "tbIType";
             this.tbIType.Size = new System.Drawing.Size(248, 26);
             this.tbIType.TabIndex = 6;
@@ -248,7 +268,7 @@
             // 
             this.tbOrder.Dock = System.Windows.Forms.DockStyle.Top;
             this.tbOrder.Location = new System.Drawing.Point(254, 68);
-            this.tbOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbOrder.Margin = new System.Windows.Forms.Padding(2);
             this.tbOrder.Name = "tbOrder";
             this.tbOrder.Size = new System.Drawing.Size(248, 26);
             this.tbOrder.TabIndex = 4;
@@ -270,7 +290,7 @@
             this.cbCo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCo.FormattingEnabled = true;
             this.cbCo.Location = new System.Drawing.Point(254, 20);
-            this.cbCo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbCo.Margin = new System.Windows.Forms.Padding(2);
             this.cbCo.Name = "cbCo";
             this.cbCo.Size = new System.Drawing.Size(248, 28);
             this.cbCo.TabIndex = 2;
@@ -293,7 +313,7 @@
             this.panel9.Controls.Add(this.pictureBox_QS);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(254, 256);
             this.panel9.TabIndex = 0;
@@ -302,7 +322,7 @@
             // 
             this.btnBrowse.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnBrowse.Location = new System.Drawing.Point(0, 218);
-            this.btnBrowse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBrowse.Margin = new System.Windows.Forms.Padding(2);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(254, 38);
             this.btnBrowse.TabIndex = 1;
@@ -315,7 +335,7 @@
             this.pictureBox_QS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_QS.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox_QS.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox_QS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox_QS.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox_QS.Name = "pictureBox_QS";
             this.pictureBox_QS.Size = new System.Drawing.Size(254, 137);
             this.pictureBox_QS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -327,7 +347,7 @@
             this.panel7.Controls.Add(this.dataGridView1);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(534, 28);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(421, 256);
             this.panel7.TabIndex = 6;
@@ -337,30 +357,11 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(421, 256);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label5.Location = new System.Drawing.Point(254, 140);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 20);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Printer:";
-            // 
-            // cbPrinter
-            // 
-            this.cbPrinter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cbPrinter.FormattingEnabled = true;
-            this.cbPrinter.Location = new System.Drawing.Point(254, 160);
-            this.cbPrinter.Name = "cbPrinter";
-            this.cbPrinter.Size = new System.Drawing.Size(248, 28);
-            this.cbPrinter.TabIndex = 8;
             // 
             // AddQSetup
             // 
@@ -373,7 +374,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddQSetup";
             this.Size = new System.Drawing.Size(981, 486);
             this.panel5.ResumeLayout(false);

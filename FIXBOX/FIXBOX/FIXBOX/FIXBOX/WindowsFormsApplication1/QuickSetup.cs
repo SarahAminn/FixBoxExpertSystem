@@ -63,7 +63,7 @@ namespace FIXBOX
 
         private void loadpicturebox() {
             try {
-                cmd = new SqlCommand("select QSP_QSetup from QuickSetupPrinters where QSP_Company='"+co+"' and QSP_IType='"+it+"' and QSP_Order='"+order+"'", con);
+                cmd = new SqlCommand("select QSP_QSetup from QuickSetupPrinters where QSP_Company='"+co+"' and QSP_IType='"+it+"' and QSP_Order='"+order+"' and QSP_Printer='"+Device.id+"'", con);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();
