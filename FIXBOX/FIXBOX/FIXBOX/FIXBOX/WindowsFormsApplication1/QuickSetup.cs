@@ -39,6 +39,12 @@ namespace FIXBOX
             GetData();
             getMax();
             loadpicturebox();
+            if (Max == order)
+            {
+                btnNext.Enabled = false;
+                btnPrevious.Enabled = false;
+
+            }
         }
 
         private void GetData() {
