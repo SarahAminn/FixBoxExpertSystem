@@ -144,6 +144,7 @@
             this.btnNoAct.TabIndex = 9;
             this.btnNoAct.Text = "No Action";
             this.btnNoAct.UseVisualStyleBackColor = false;
+            this.btnNoAct.Click += new System.EventHandler(this.btnNoAct_Click);
             // 
             // btnPJ
             // 
@@ -173,6 +174,7 @@
             this.btnPE.TabIndex = 11;
             this.btnPE.Text = "Printing Error";
             this.btnPE.UseVisualStyleBackColor = false;
+            this.btnPE.Click += new System.EventHandler(this.btnPE_Click);
             // 
             // Questions
             // 

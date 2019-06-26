@@ -44,6 +44,28 @@ namespace FIXBOX
         private void btnPJ_Click(object sender, EventArgs e)
         {
             operation = "PAPERJAM";
+            QuestionsHome QH = new QuestionsHome();
+            this.Parent.Controls.Add(QH);
+            QH.Dock = DockStyle.Fill;
+            QH.BringToFront();
+        }
+
+        private void btnNoAct_Click(object sender, EventArgs e)
+        {
+            operation = "NETWORK";
+            QuestionsHome QH = new QuestionsHome();
+            this.Parent.Controls.Add(QH);
+            QH.Dock = DockStyle.Fill;
+            QH.BringToFront();
+        }
+
+        private void btnPE_Click(object sender, EventArgs e)
+        {
+            operation = "PRINTINGERROR";
+            QuestionsHome QH = new QuestionsHome();
+            this.Parent.Controls.Add(QH);
+            QH.Dock = DockStyle.Fill;
+            QH.BringToFront();
         }
     }
 }

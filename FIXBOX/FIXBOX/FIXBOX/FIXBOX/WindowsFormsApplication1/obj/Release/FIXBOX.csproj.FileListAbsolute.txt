@@ -88,3 +88,4 @@ C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\Wind
 C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.Questions.resources
 C:\Users\Sarah Hatem\Desktop\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.csproj.GenerateResource.Cache
 C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.Zoom.resources
+C:\Users\Bahaa\Documents\GitHub\FixBoxExpertSystem\FIXBOX\FIXBOX\FIXBOX\FIXBOX\WindowsFormsApplication1\obj\Release\FIXBOX.QuestionsHome.resources
