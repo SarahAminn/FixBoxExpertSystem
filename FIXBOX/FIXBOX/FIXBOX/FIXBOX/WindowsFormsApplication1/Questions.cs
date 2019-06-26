@@ -40,5 +40,10 @@ namespace FIXBOX
             Err.BringToFront();
 
         }
+
+        private void btnPJ_Click(object sender, EventArgs e)
+        {
+            operation = "PAPERJAM";
+        }
     }
 }

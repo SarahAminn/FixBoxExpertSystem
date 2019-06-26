@@ -158,6 +158,7 @@
             this.btnPJ.TabIndex = 10;
             this.btnPJ.Text = "Paper is jammed";
             this.btnPJ.UseVisualStyleBackColor = false;
+            this.btnPJ.Click += new System.EventHandler(this.btnPJ_Click);
             // 
             // btnPE
             // 
