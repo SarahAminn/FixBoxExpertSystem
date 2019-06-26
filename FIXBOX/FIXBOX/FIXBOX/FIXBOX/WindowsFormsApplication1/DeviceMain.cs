@@ -14,6 +14,7 @@ namespace FIXBOX
 {
     public partial class DeviceMain : UserControl
     {
+        public static byte[] I;
         SqlConnection con = new SqlConnection();
         public DeviceMain()
         {
@@ -78,6 +79,7 @@ namespace FIXBOX
                     }
                     else
                     {
+                        I = img;
                         MemoryStream ms = new MemoryStream(img);
                         pictureBox1.Image = Image.FromStream(ms);
 
@@ -190,20 +192,17 @@ namespace FIXBOX
 
         }
 
-        Image Zoom(Image img, Size size) {
-            Bitmap bmp = new Bitmap(img, img.Width + (img.Width * size.Width / 100), img.Height + (img.Height * size.Height / 100));
-            Graphics g = Graphics.FromImage(bmp);
-            g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            return bmp;
         
-        }
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
-            //Zoom(pictureBox1.Image, new Size(120,120));
+            Zoom z = new Zoom();
+            this.Controls.Add(z);
+            z.BringToFront();
+
         }
 
-
+        
 
     }
 }
