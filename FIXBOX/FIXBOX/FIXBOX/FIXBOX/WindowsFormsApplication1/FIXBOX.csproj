@@ -162,6 +162,12 @@
     <Compile Include="QuestionsHome.Designer.cs">
       <DependentUpon>QuestionsHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuestionsSol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuestionsSol.Designer.cs">
+      <DependentUpon>QuestionsSol.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuickSetup.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -232,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuestionsHome.resx">
       <DependentUpon>QuestionsHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuestionsSol.resx">
+      <DependentUpon>QuestionsSol.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuickSetup.resx">
       <DependentUpon>QuickSetup.cs</DependentUpon>
