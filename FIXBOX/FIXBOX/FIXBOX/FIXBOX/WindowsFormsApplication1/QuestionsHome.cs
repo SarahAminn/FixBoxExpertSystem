@@ -15,8 +15,9 @@ namespace FIXBOX
     public partial class QuestionsHome : UserControl
     {
         SqlConnection con = new SqlConnection();
-        public static string co, it,cho ;
+        public static string type, it,cho,co,chSol ;
         int order = 1, max=1;
+        DataTable datat;
         public QuestionsHome()
         {
             InitializeComponent();
@@ -55,7 +56,7 @@ namespace FIXBOX
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("select printers_IType,printers_Type from Printers where printer_Id='" + Device.id + "'", con);
+                SqlCommand cmd = new SqlCommand("select printers_IType,printer_Type,printer_Company from Printers where printer_Id='" + Device.id + "'", con);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();
@@ -63,7 +64,8 @@ namespace FIXBOX
                 {
                     
                     it = reader[0].ToString();
-                    co = reader[1].ToString();
+                    type = reader[1].ToString();
+                    co = reader[2].ToString();
                 }
                 con.Close();
             }
@@ -80,7 +82,7 @@ namespace FIXBOX
             string Val = " ";
             try
             {
-                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select "+Col+" from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_Order='"+order.ToString()+"' and QPrinters_Type='"+co+"'", con);
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select "+Col+" from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_Order='"+order.ToString()+"' and QPrinters_Type='"+type+"'", con);
                 DataTable dt = new DataTable();
                 con.Open();
                 Cmd_CI.Fill(dt);
@@ -105,7 +107,7 @@ namespace FIXBOX
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("select QPrinters_Question from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_Order='" + order.ToString() + "' and QPrinters_Type='" + co + "''", con);
+                SqlCommand cmd = new SqlCommand("select QPrinters_Question from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_Order='" + order.ToString() + "' and QPrinters_Type='" + type + "''", con);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();
@@ -182,9 +184,32 @@ namespace FIXBOX
             return Val;
         }
 
+        
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                datat = new DataTable();
+                cho = getvaluefromchoices(con, "choice_Id");
+                SqlDataAdapter cmd_sol = new SqlDataAdapter("select CHSol_Id from ChoiceSolutions where CHSol_Choice ='" + cho + "'", con);
+                con.Open();
+                cmd_sol.Fill(datat);
+                con.Close();
+                if (datat.Rows.Count > 0) {
+                    QuestionsSol QSol = new QuestionsSol();
+                    this.Parent.Controls.Add(QSol);
+                    QSol.BringToFront();
+                    QSol.Dock = DockStyle.Fill;
+                    this.Hide();
+                
+                }else if(datat.Rows.Count == 0){
+                    order++;
+                    loadComboBox("select choice_ch from Choices where choice_Question='" + getvaluefromQuestions(con, "QPrinters_Id") + "' ", comboBox1);
+                    loadrichtextbox();
+                
+                }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
     }
 }
