@@ -15,7 +15,7 @@ namespace FIXBOX
     public partial class QuestionsHome : UserControl
     {
         SqlConnection con = new SqlConnection();
-        public static string co, it;
+        public static string co, it,cho ;
         int order = 1, max=1;
         public QuestionsHome()
         {
@@ -55,7 +55,7 @@ namespace FIXBOX
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("select printers_IType from Printers where printer_Id='" + Device.id + "'", con);
+                SqlCommand cmd = new SqlCommand("select printers_IType,printers_Type from Printers where printer_Id='" + Device.id + "'", con);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();
@@ -63,6 +63,7 @@ namespace FIXBOX
                 {
                     
                     it = reader[0].ToString();
+                    co = reader[1].ToString();
                 }
                 con.Close();
             }
@@ -79,7 +80,7 @@ namespace FIXBOX
             string Val = " ";
             try
             {
-                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select "+Col+" from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_Type='" + Questions.operation + "'", con);
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select "+Col+" from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_Order='"+order.ToString()+"' and QPrinters_Type='"+co+"'", con);
                 DataTable dt = new DataTable();
                 con.Open();
                 Cmd_CI.Fill(dt);
@@ -98,6 +99,30 @@ namespace FIXBOX
             }
 
             return Val;
+        }
+
+        private void loadrichtextbox()
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("select QPrinters_Question from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_Order='" + order.ToString() + "' and QPrinters_Type='" + co + "''", con);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                if (reader.HasRows)
+                {
+                    richTextBox1.Text = reader[0].ToString();
+
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+                MessageBox.Show(ex.Message);
+            }
+
+
         }
 
         // Loads Comboboxes
@@ -124,7 +149,42 @@ namespace FIXBOX
 
         private void QuestionsHome_Load(object sender, EventArgs e)
         {
-            loadComboBox("select ", comboBox1);
+            GetData();
+            getMax();
+            loadComboBox("select choice_ch from Choices where choice_Question='"+getvaluefromQuestions(con,"QPrinters_Id")+"' ", comboBox1);
+            loadrichtextbox();
+        }
+
+        public string getvaluefromchoices(SqlConnection con, String Col)
+        {
+
+            string Val = " ";
+            try
+            {
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from Choices where choice_Question='"+getvaluefromQuestions(con,"QPrinters_Id")+"' and choice_ch='"+comboBox1.SelectedItem.ToString()+"'", con);
+                DataTable dt = new DataTable();
+                con.Open();
+                Cmd_CI.Fill(dt);
+
+                if (dt.Rows.Count == 1)
+                {
+
+                    DataRow row = dt.Rows[0];
+                    Val = row[Col].ToString();
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return Val;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
