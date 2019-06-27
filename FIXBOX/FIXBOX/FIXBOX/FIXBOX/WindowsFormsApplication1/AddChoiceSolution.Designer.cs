@@ -168,6 +168,7 @@
             // cbCo
             // 
             this.cbCo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbCo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCo.FormattingEnabled = true;
             this.cbCo.Location = new System.Drawing.Point(0, 304);
             this.cbCo.Name = "cbCo";
@@ -188,6 +189,7 @@
             // cbPrinters
             // 
             this.cbPrinters.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbPrinters.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPrinters.FormattingEnabled = true;
             this.cbPrinters.Location = new System.Drawing.Point(0, 338);
             this.cbPrinters.Name = "cbPrinters";

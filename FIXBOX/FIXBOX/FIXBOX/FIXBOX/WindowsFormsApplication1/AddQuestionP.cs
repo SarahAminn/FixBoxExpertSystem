@@ -21,6 +21,7 @@ namespace FIXBOX
             InitializeComponent();
             con.ConnectionString = "data source = (local);database = FIXBOX;integrated security = SSPI";
             loadComboBox("select QPrinters_Id from QuestionsPrinters", cbDelete);
+            loadComboBox("select QPrinters_Id from QuestionsPrinters", cbQuest);
             LoadTable(dataGridView1);
         }
 
@@ -80,7 +81,34 @@ namespace FIXBOX
             string Val = " ";
             try
             {
-                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select "+Col+" from QuestionsPrinters where QPrinters_Question='" + tbQuestion.Text + "'and QPrinters_Type='" + tbType.Text + "'and QPrinters_Order='" + tbOrder.Text + "'and QPrinters_IType='" + tbIT.Text + "'and QPrinters_QType='" + tbQType.Text + "'", con);
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select "+Col+" from QuestionsPrinters where QPrinters_Question='" + tbQuestion.Text + "'and QPrinters_Type='" + tbType.Text + "'and QPrinters_Order='" + tbOrder.Text + "'and QPrinters_IType='" + tbIT.Text + "'and QPrinters_QType='" + cbQType.SelectedItem.ToString() + "'", con);
+                DataTable dt = new DataTable();
+                con.Open();
+                Cmd_CI.Fill(dt);
+
+                if (dt.Rows.Count == 1)
+                {
+
+                    DataRow row = dt.Rows[0];
+                    Val = row[Col].ToString();
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return Val;
+        }
+
+        public string getvaluefromChoices(SqlConnection con, String Col)
+        {
+
+            string Val = " ";
+            try
+            {
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from Choices where choice_ch='"+cbChoices.SelectedItem.ToString()+"'", con);
                 DataTable dt = new DataTable();
                 con.Open();
                 Cmd_CI.Fill(dt);
@@ -127,7 +155,10 @@ namespace FIXBOX
 
         private void AddQuestionP_Load(object sender, EventArgs e)
         {
-
+            cbQType.Items.Add("PRINTINGERROR");
+            cbQType.Items.Add("NETWORK");
+            cbQType.Items.Add("PAPERJAM");
+            cbChoices.Enabled = false;
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
@@ -155,10 +186,10 @@ namespace FIXBOX
             tbOrder.Clear();
             tbQuestion.Clear();
             tbType.Clear();
-            tbQType.Clear();
-
+            cbQType.Text = null;
+            cbQuest.Text = null;
             cbDelete.Text = "";
-           
+            cbChoices.Text = null;
            
         }
 
@@ -184,7 +215,7 @@ namespace FIXBOX
             try
             {
 
-                String query = "insert into QuestionsPrinters(QPrinters_Question,QPrinters_Type,QPrinters_Order,QPrinters_IType,QPrinters_QType) values('" + tbQuestion.Text + "','" + tbType.Text + "','" + tbOrder.Text + "','" + tbIT.Text + "','" + tbQType.Text + "')";
+                String query = "insert into QuestionsPrinters(QPrinters_Question,QPrinters_Type,QPrinters_Order,QPrinters_IType,QPrinters_QType,QPrinters_ConCh) values('" + tbQuestion.Text + "','" + tbType.Text + "','" + tbOrder.Text + "','" + tbIT.Text + "','" + cbQType.SelectedItem.ToString() + "','"+getvaluefromChoices(con,"choice_Id")+"')";
                 if (con.State != ConnectionState.Open)
                     con.Open();
                 SqlCommand command = new SqlCommand(query, con);
@@ -202,6 +233,12 @@ namespace FIXBOX
         {
             LoadTable(dataGridView1);
             loadComboBox("select QPrinters_Id from QuestionsPrinters", cbDelete);
+        }
+
+        private void cbQuest_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbChoices.Enabled = true;
+            loadComboBox("select choice_ch from Choices where choice_Question='"+cbQuest.SelectedItem.ToString()+"'", cbChoices);
         }
     }
 }

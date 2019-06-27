@@ -43,7 +43,6 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.tbQType = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tbIT = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,6 +56,11 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
+            this.cbQType = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbChoices = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbQuest = new System.Windows.Forms.ComboBox();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel6.SuspendLayout();
@@ -72,7 +76,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(44, 509);
+            this.panel1.Size = new System.Drawing.Size(44, 579);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -81,13 +85,13 @@
             this.panel2.Location = new System.Drawing.Point(945, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(26, 509);
+            this.panel2.Size = new System.Drawing.Size(26, 579);
             this.panel2.TabIndex = 1;
             // 
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(44, 477);
+            this.panel3.Location = new System.Drawing.Point(44, 547);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(901, 32);
@@ -131,13 +135,13 @@
             this.panel6.Location = new System.Drawing.Point(44, 218);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(164, 259);
+            this.panel6.Size = new System.Drawing.Size(164, 329);
             this.panel6.TabIndex = 5;
             // 
             // btnBrowse
             // 
             this.btnBrowse.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnBrowse.Location = new System.Drawing.Point(0, 227);
+            this.btnBrowse.Location = new System.Drawing.Point(0, 297);
             this.btnBrowse.Margin = new System.Windows.Forms.Padding(2);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(164, 32);
@@ -158,7 +162,7 @@
             this.panel7.Location = new System.Drawing.Point(785, 218);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(160, 259);
+            this.panel7.Size = new System.Drawing.Size(160, 329);
             this.panel7.TabIndex = 6;
             // 
             // cbDelete
@@ -186,7 +190,7 @@
             // btnDelete
             // 
             this.btnDelete.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnDelete.Location = new System.Drawing.Point(0, 163);
+            this.btnDelete.Location = new System.Drawing.Point(0, 233);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(160, 32);
@@ -198,7 +202,7 @@
             // btnClear
             // 
             this.btnClear.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnClear.Location = new System.Drawing.Point(0, 195);
+            this.btnClear.Location = new System.Drawing.Point(0, 265);
             this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(160, 32);
@@ -210,7 +214,7 @@
             // btnSave
             // 
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnSave.Location = new System.Drawing.Point(0, 227);
+            this.btnSave.Location = new System.Drawing.Point(0, 297);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(160, 32);
@@ -221,7 +225,11 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.tbQType);
+            this.panel8.Controls.Add(this.cbChoices);
+            this.panel8.Controls.Add(this.label6);
+            this.panel8.Controls.Add(this.cbQuest);
+            this.panel8.Controls.Add(this.label8);
+            this.panel8.Controls.Add(this.cbQType);
             this.panel8.Controls.Add(this.label7);
             this.panel8.Controls.Add(this.tbIT);
             this.panel8.Controls.Add(this.label5);
@@ -236,17 +244,8 @@
             this.panel8.Location = new System.Drawing.Point(208, 218);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(322, 259);
+            this.panel8.Size = new System.Drawing.Size(322, 329);
             this.panel8.TabIndex = 7;
-            // 
-            // tbQType
-            // 
-            this.tbQType.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbQType.Location = new System.Drawing.Point(0, 177);
-            this.tbQType.Margin = new System.Windows.Forms.Padding(2);
-            this.tbQType.Name = "tbQType";
-            this.tbQType.Size = new System.Drawing.Size(322, 23);
-            this.tbQType.TabIndex = 9;
             // 
             // label7
             // 
@@ -347,7 +346,7 @@
             this.panel9.Location = new System.Drawing.Point(530, 218);
             this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(255, 259);
+            this.panel9.Size = new System.Drawing.Size(255, 329);
             this.panel9.TabIndex = 8;
             // 
             // panel10
@@ -384,6 +383,57 @@
             this.btnOrder.UseVisualStyleBackColor = true;
             this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
+            // cbQType
+            // 
+            this.cbQType.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbQType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbQType.FormattingEnabled = true;
+            this.cbQType.Location = new System.Drawing.Point(0, 177);
+            this.cbQType.Name = "cbQType";
+            this.cbQType.Size = new System.Drawing.Size(322, 25);
+            this.cbQType.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.Location = new System.Drawing.Point(0, 244);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(191, 17);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Connected Choice: (optional)";
+            // 
+            // cbChoices
+            // 
+            this.cbChoices.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbChoices.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbChoices.FormattingEnabled = true;
+            this.cbChoices.Location = new System.Drawing.Point(0, 261);
+            this.cbChoices.Name = "cbChoices";
+            this.cbChoices.Size = new System.Drawing.Size(322, 25);
+            this.cbChoices.TabIndex = 11;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label8.Location = new System.Drawing.Point(0, 202);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(128, 17);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Previous Question:";
+            // 
+            // cbQuest
+            // 
+            this.cbQuest.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbQuest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbQuest.FormattingEnabled = true;
+            this.cbQuest.Location = new System.Drawing.Point(0, 219);
+            this.cbQuest.Name = "cbQuest";
+            this.cbQuest.Size = new System.Drawing.Size(322, 25);
+            this.cbQuest.TabIndex = 13;
+            this.cbQuest.SelectedIndexChanged += new System.EventHandler(this.cbQuest_SelectedIndexChanged);
+            // 
             // AddQuestionP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -399,7 +449,7 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddQuestionP";
-            this.Size = new System.Drawing.Size(971, 509);
+            this.Size = new System.Drawing.Size(971, 579);
             this.Load += new System.EventHandler(this.AddQuestionP_Load);
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -442,8 +492,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button btnOrder;
-        private System.Windows.Forms.TextBox tbQType;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.ComboBox cbChoices;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbQType;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cbQuest;
     }
 }

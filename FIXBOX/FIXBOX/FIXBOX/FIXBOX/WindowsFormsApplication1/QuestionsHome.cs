@@ -203,7 +203,7 @@ namespace FIXBOX
                     this.Hide();
                 
                 }else if(datat.Rows.Count == 0){
-                    order++;
+                    
                     loadComboBox("select choice_ch from Choices where choice_Question='" + getvaluefromQuestions(con, "QPrinters_Id") + "' ", comboBox1);
                     loadrichtextbox();
                 

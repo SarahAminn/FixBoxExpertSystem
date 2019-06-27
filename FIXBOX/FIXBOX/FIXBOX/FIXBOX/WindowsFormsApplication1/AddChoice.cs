@@ -52,7 +52,7 @@ namespace FIXBOX
             string Val = " ";
             try
             {
-                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from Choices where choice_ch='" + tbChoice.Text + "'and choice_Id='" + id + "'", con);
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from Choices where choice_ch='" + tbChoice.Text + "'and choice_Question='" + id + "'", con);
                 DataTable dt = new DataTable();
                 con.Open();
                 Cmd_CI.Fill(dt);
