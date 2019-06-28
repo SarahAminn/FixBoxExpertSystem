@@ -34,7 +34,7 @@ namespace FIXBOX
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("select MAX(QPrinters_Order) from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_Type='"+Questions.operation+"'", con);
+                SqlCommand cmd = new SqlCommand("select MAX(QPrinters_Order) from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='"+Questions.operation+"'and QPrinters_Type='"+type+"'", con);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();
@@ -78,7 +78,7 @@ namespace FIXBOX
 
         public string getvaluefromQuestions(SqlConnection con, String Col)
         {
-
+            // need to be changed if the question have Choice connected
             string Val = " ";
             try
             {
@@ -105,6 +105,7 @@ namespace FIXBOX
 
         private void loadrichtextbox()
         {
+            // need to be changed if the question have Choice connected
             try
             {
                 SqlCommand cmd = new SqlCommand("select QPrinters_Question from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_Order='" + order.ToString() + "' and QPrinters_Type='" + type + "''", con);

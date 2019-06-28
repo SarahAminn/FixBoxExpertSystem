@@ -26,7 +26,7 @@ namespace FIXBOX
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("select MAX(CHSol_Order) from QuestionsPrinters where where CHSol_Company='" + co + "' and CHSol_Printer='" + Device.id + "' and CHSol_Choice='" + QuestionsHome.cho + "'", con);
+                SqlCommand cmd = new SqlCommand("select MAX(CHSol_Order) from ChoiceSolutions where where CHSol_Company='" + co + "' and CHSol_Printer='" + Device.id + "' and CHSol_Choice='" + QuestionsHome.cho + "'", con);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();

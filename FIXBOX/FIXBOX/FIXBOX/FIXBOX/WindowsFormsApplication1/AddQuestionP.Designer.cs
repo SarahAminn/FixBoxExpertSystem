@@ -43,6 +43,11 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.cbChoices = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbQuest = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbQType = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tbIT = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,11 +61,6 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
-            this.cbQType = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cbChoices = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cbQuest = new System.Windows.Forms.ComboBox();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel6.SuspendLayout();
@@ -247,6 +247,57 @@
             this.panel8.Size = new System.Drawing.Size(322, 329);
             this.panel8.TabIndex = 7;
             // 
+            // cbChoices
+            // 
+            this.cbChoices.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbChoices.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbChoices.FormattingEnabled = true;
+            this.cbChoices.Location = new System.Drawing.Point(0, 261);
+            this.cbChoices.Name = "cbChoices";
+            this.cbChoices.Size = new System.Drawing.Size(322, 25);
+            this.cbChoices.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.Location = new System.Drawing.Point(0, 244);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(191, 17);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Connected Choice: (optional)";
+            // 
+            // cbQuest
+            // 
+            this.cbQuest.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbQuest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbQuest.FormattingEnabled = true;
+            this.cbQuest.Location = new System.Drawing.Point(0, 219);
+            this.cbQuest.Name = "cbQuest";
+            this.cbQuest.Size = new System.Drawing.Size(322, 25);
+            this.cbQuest.TabIndex = 13;
+            this.cbQuest.SelectedIndexChanged += new System.EventHandler(this.cbQuest_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label8.Location = new System.Drawing.Point(0, 202);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(128, 17);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Previous Question:";
+            // 
+            // cbQType
+            // 
+            this.cbQType.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbQType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbQType.FormattingEnabled = true;
+            this.cbQType.Location = new System.Drawing.Point(0, 177);
+            this.cbQType.Name = "cbQType";
+            this.cbQType.Size = new System.Drawing.Size(322, 25);
+            this.cbQType.TabIndex = 9;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -382,57 +433,6 @@
             this.btnOrder.Text = "Unlock Order";
             this.btnOrder.UseVisualStyleBackColor = true;
             this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
-            // 
-            // cbQType
-            // 
-            this.cbQType.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cbQType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbQType.FormattingEnabled = true;
-            this.cbQType.Location = new System.Drawing.Point(0, 177);
-            this.cbQType.Name = "cbQType";
-            this.cbQType.Size = new System.Drawing.Size(322, 25);
-            this.cbQType.TabIndex = 9;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.Location = new System.Drawing.Point(0, 244);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(191, 17);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Connected Choice: (optional)";
-            // 
-            // cbChoices
-            // 
-            this.cbChoices.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cbChoices.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbChoices.FormattingEnabled = true;
-            this.cbChoices.Location = new System.Drawing.Point(0, 261);
-            this.cbChoices.Name = "cbChoices";
-            this.cbChoices.Size = new System.Drawing.Size(322, 25);
-            this.cbChoices.TabIndex = 11;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label8.Location = new System.Drawing.Point(0, 202);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(128, 17);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Previous Question:";
-            // 
-            // cbQuest
-            // 
-            this.cbQuest.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cbQuest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbQuest.FormattingEnabled = true;
-            this.cbQuest.Location = new System.Drawing.Point(0, 219);
-            this.cbQuest.Name = "cbQuest";
-            this.cbQuest.Size = new System.Drawing.Size(322, 25);
-            this.cbQuest.TabIndex = 13;
-            this.cbQuest.SelectedIndexChanged += new System.EventHandler(this.cbQuest_SelectedIndexChanged);
             // 
             // AddQuestionP
             // 
