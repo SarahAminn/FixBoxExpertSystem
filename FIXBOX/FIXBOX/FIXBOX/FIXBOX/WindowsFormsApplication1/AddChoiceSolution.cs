@@ -22,6 +22,7 @@ namespace FIXBOX
             InitializeComponent();
             con.ConnectionString = "data source = (local);database = FIXBOX;integrated security = SSPI";
             cbPrinters.Enabled = false;
+            loadComboBox("select Company_name from Companys", cbCo);
 
         }
 
