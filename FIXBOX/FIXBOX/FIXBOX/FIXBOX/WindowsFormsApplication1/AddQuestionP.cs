@@ -216,7 +216,7 @@ namespace FIXBOX
             {
                 String query="";
                 string choo = getvaluefromChoices(con, "choice_Id");
-                MessageBox.Show("xx"+choo+"xx");
+                
                 if (choo != " ")
                 {
                      query = "insert into QuestionsPrinters(QPrinters_Question,QPrinters_Type,QPrinters_Order,QPrinters_IType,QPrinters_QType,QPrinters_ConCh) values('" + tbQuestion.Text + "','" + tbType.Text + "','" + tbOrder.Text + "','" + tbIT.Text + "','" + cbQType.SelectedItem.ToString() + "','" + choo + "')";

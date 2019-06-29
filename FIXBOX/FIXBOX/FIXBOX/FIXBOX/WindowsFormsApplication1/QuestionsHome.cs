@@ -15,9 +15,9 @@ namespace FIXBOX
     public partial class QuestionsHome : UserControl
     {
         SqlConnection con = new SqlConnection();
-        public static string type, it,cho,co,chSol ;
+        public static string type, it,cho=null,co,chSol ;
         int order = 1, max=1;
-        DataTable datat;
+        
         public QuestionsHome()
         {
             InitializeComponent();
@@ -108,7 +108,7 @@ namespace FIXBOX
             string Val = " ";
             try
             {
-                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_Order='" + order.ToString() + "' and QPrinters_Type='" + type + "' and QPrinters_ConCh='"+choice+"'", con);
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_Type='" + type + "' and QPrinters_ConCh='"+choice+"'", con);
                 DataTable dt = new DataTable();
                 con.Open();
                 Cmd_CI.Fill(dt);
@@ -134,7 +134,7 @@ namespace FIXBOX
             
             try
             {
-                SqlCommand cmd = new SqlCommand("select QPrinters_Question from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_Order='" + order.ToString() + "' and QPrinters_Type='" + type + "''", con);
+                SqlCommand cmd = new SqlCommand("select QPrinters_Question from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_Order='" + order.ToString() + "' and QPrinters_Type='" + type + "'", con);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();
@@ -159,7 +159,7 @@ namespace FIXBOX
             
             try
             {
-                SqlCommand cmd = new SqlCommand("select QPrinters_Question from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_Order='" + order.ToString() + "' and QPrinters_Type='" + type + "' and QPrinters_ConCh='" + Choice + "'", con);
+                SqlCommand cmd = new SqlCommand("select QPrinters_Question from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_Type='" + type + "' and QPrinters_ConCh='" + Choice + "'", con);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();
@@ -211,11 +211,20 @@ namespace FIXBOX
 
         public string getvaluefromchoices(SqlConnection con, String Col)
         {
-
+            // find solution to getquest
             string Val = " ";
             try
             {
-                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from Choices where choice_Question='"+getvaluefromQuestions(con,"QPrinters_Id")+"' and choice_ch='"+comboBox1.SelectedItem.ToString()+"'", con);
+                string query ;
+                if (cho == null)
+                {
+                    query = "select " + Col + " from Choices where choice_Question='" + getvaluefromQuestions(con, "QPrinters_Id") + "' and choice_ch='" + comboBox1.SelectedItem.ToString() + "'";
+
+                }
+                else {
+                    query = "select " + Col + " from Choices where choice_Question='" + getvaluefromQuestions(con, "QPrinters_Id",cho) + "' and choice_ch='" + comboBox1.SelectedItem.ToString() + "'";
+                }
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter(query, con);
                 DataTable dt = new DataTable();
                 con.Open();
                 Cmd_CI.Fill(dt);
@@ -239,33 +248,36 @@ namespace FIXBOX
         
         private void button2_Click(object sender, EventArgs e)
         {
+            cho = getvaluefromchoices(con, "choice_Id");
             try
             {
-                datat = new DataTable();
-                SqlDataAdapter cmd_sol = new SqlDataAdapter("select CHSol_Id from ChoiceSolutions where CHSol_Choice ='" + cho + "'", con);
+                
+                SqlCommand cmd_sol = new SqlCommand("select CHSol_Id from ChoiceSolutions where CHSol_Choice ='" + cho + "'", con);
                 con.Open();
-                cmd_sol.Fill(datat);
-                con.Close();
-                if (datat.Rows.Count > 0) {
+                SqlDataReader reader = cmd_sol.ExecuteReader();
+                reader.Read();
+                
+                if (reader.HasRows) {
                     QuestionsSol QSol = new QuestionsSol();
                     this.Parent.Controls.Add(QSol);
                     QSol.BringToFront();
                     QSol.Dock = DockStyle.Fill;
+                    con.Close();
                     this.Hide();
                 
-                }else if(datat.Rows.Count == 0){
-                    
-                    loadComboBox("select choice_ch from Choices where choice_Question='" + getvaluefromQuestions(con, "QPrinters_Id") + "' ", comboBox1);
-                    loadrichtextbox();
+                }else if(!reader.HasRows){
+                    con.Close();
+                    loadComboBox("select choice_ch from Choices where choice_Question='" + getvaluefromQuestions(con, "QPrinters_Id",cho) + "' ", comboBox1);
+                    loadrichtextbox(cho);
                 
                 }
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { con.Close(); MessageBox.Show(ex.Message); }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cho = getvaluefromchoices(con, "choice_Id");
+            
         }
     }
 }

@@ -20,13 +20,14 @@ namespace FIXBOX
         public QuestionsSol()
         {
             InitializeComponent();
+            con.ConnectionString = "data source = (local);database = FIXBOX;integrated security = SSPI";
         }
 
         private void getMax()
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("select MAX(CHSol_Order) from ChoiceSolutions where where CHSol_Company='" + co + "' and CHSol_Printer='" + Device.id + "' and CHSol_Choice='" + QuestionsHome.cho + "'", con);
+                SqlCommand cmd = new SqlCommand("select MAX(CHSol_Order) from ChoiceSolutions where CHSol_Company='" + co + "' and CHSol_Printer='" + Device.id + "' and CHSol_Choice='" + QuestionsHome.cho + "'", con);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();
@@ -129,6 +130,15 @@ namespace FIXBOX
             {
                 MessageBox.Show("No more details.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            DeviceMain DV = new DeviceMain();
+            this.Parent.Controls.Add(DV);
+            DV.Dock = DockStyle.Fill;
+            DV.BringToFront();
+            this.Hide();
         }
     }
 }

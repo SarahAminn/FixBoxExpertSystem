@@ -7,20 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.IO;
 
 namespace FIXBOX
 {
     public partial class Questions : UserControl
     {
+        SqlConnection con;
         public static string operation;
         public Questions()
         {
             InitializeComponent();
+            con.ConnectionString = "data source = (local);database = FIXBOX;integrated security = SSPI";
         }
 
         private void Questions_Load(object sender, EventArgs e)
         {
+           // check if the err n msg is found
+            try
+            {
+                SqlCommand cmd = new SqlCommand("select ",con);
 
+            }
+            catch (Exception ex) { con.Close(); MessageBox.Show(ex.Message); }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -48,6 +58,7 @@ namespace FIXBOX
             this.Parent.Controls.Add(QH);
             QH.Dock = DockStyle.Fill;
             QH.BringToFront();
+            this.Hide();
         }
 
         private void btnNoAct_Click(object sender, EventArgs e)
@@ -57,6 +68,7 @@ namespace FIXBOX
             this.Parent.Controls.Add(QH);
             QH.Dock = DockStyle.Fill;
             QH.BringToFront();
+            this.Hide();
         }
 
         private void btnPE_Click(object sender, EventArgs e)
@@ -66,6 +78,7 @@ namespace FIXBOX
             this.Parent.Controls.Add(QH);
             QH.Dock = DockStyle.Fill;
             QH.BringToFront();
+            this.Hide();
         }
     }
 }
