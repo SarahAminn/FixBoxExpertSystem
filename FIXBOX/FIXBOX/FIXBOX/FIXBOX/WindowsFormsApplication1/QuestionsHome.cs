@@ -78,7 +78,7 @@ namespace FIXBOX
 
         public string getvaluefromQuestions(SqlConnection con, String Col)
         {
-            // need to be changed if the question have Choice connected
+            
             string Val = " ";
             try
             {
@@ -102,13 +102,64 @@ namespace FIXBOX
 
             return Val;
         }
+        public string getvaluefromQuestions(SqlConnection con, String Col,String choice)
+        {
+           
+            string Val = " ";
+            try
+            {
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_Order='" + order.ToString() + "' and QPrinters_Type='" + type + "' and QPrinters_ConCh='"+choice+"'", con);
+                DataTable dt = new DataTable();
+                con.Open();
+                Cmd_CI.Fill(dt);
+
+                if (dt.Rows.Count == 1)
+                {
+
+                    DataRow row = dt.Rows[0];
+                    Val = row[Col].ToString();
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return Val;
+        }
 
         private void loadrichtextbox()
         {
-            // need to be changed if the question have Choice connected
+            
             try
             {
                 SqlCommand cmd = new SqlCommand("select QPrinters_Question from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_Order='" + order.ToString() + "' and QPrinters_Type='" + type + "''", con);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                if (reader.HasRows)
+                {
+                    richTextBox1.Text = reader[0].ToString();
+
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }
+
+        private void loadrichtextbox(String Choice)
+        {
+            
+            try
+            {
+                SqlCommand cmd = new SqlCommand("select QPrinters_Question from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_Order='" + order.ToString() + "' and QPrinters_Type='" + type + "' and QPrinters_ConCh='" + Choice + "'", con);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();
@@ -191,7 +242,6 @@ namespace FIXBOX
             try
             {
                 datat = new DataTable();
-                cho = getvaluefromchoices(con, "choice_Id");
                 SqlDataAdapter cmd_sol = new SqlDataAdapter("select CHSol_Id from ChoiceSolutions where CHSol_Choice ='" + cho + "'", con);
                 con.Open();
                 cmd_sol.Fill(datat);
@@ -211,6 +261,11 @@ namespace FIXBOX
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cho = getvaluefromchoices(con, "choice_Id");
         }
     }
 }

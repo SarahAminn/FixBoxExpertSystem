@@ -33,9 +33,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel5.SuspendLayout();
@@ -84,14 +84,19 @@
             this.panel5.Size = new System.Drawing.Size(611, 41);
             this.panel5.TabIndex = 4;
             // 
-            // panel6
+            // button2
             // 
-            this.panel6.Controls.Add(this.richTextBox1);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(23, 23);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(611, 123);
-            this.panel6.TabIndex = 5;
+            this.button2.BackColor = System.Drawing.Color.DimGray;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(514, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(97, 41);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Continue";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -107,19 +112,14 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // panel6
             // 
-            this.button2.BackColor = System.Drawing.Color.DimGray;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(514, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 41);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Continue";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.panel6.Controls.Add(this.richTextBox1);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(23, 23);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(611, 123);
+            this.panel6.TabIndex = 5;
             // 
             // richTextBox1
             // 
@@ -140,6 +140,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(611, 38);
             this.comboBox1.TabIndex = 6;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // QuestionsHome
             // 

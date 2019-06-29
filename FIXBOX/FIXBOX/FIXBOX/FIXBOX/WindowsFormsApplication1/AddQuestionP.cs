@@ -222,7 +222,7 @@ namespace FIXBOX
                      query = "insert into QuestionsPrinters(QPrinters_Question,QPrinters_Type,QPrinters_Order,QPrinters_IType,QPrinters_QType,QPrinters_ConCh) values('" + tbQuestion.Text + "','" + tbType.Text + "','" + tbOrder.Text + "','" + tbIT.Text + "','" + cbQType.SelectedItem.ToString() + "','" + choo + "')";
                 }
                 else {
-                     query = "insert into QuestionsPrinters(QPrinters_Question,QPrinters_Type,QPrinters_Order,QPrinters_IType,QPrinters_QType) values('" + tbQuestion.Text + "','" + tbType.Text + "','" + tbOrder.Text + "','" + tbIT.Text + "','" + cbQType.SelectedItem.ToString() + "')";
+                    query = "insert into QuestionsPrinters(QPrinters_Question,QPrinters_Type,QPrinters_Order,QPrinters_IType,QPrinters_QType) values('" + tbQuestion.Text + "','" + tbType.Text + "','" + tbOrder.Text + "','" + tbIT.Text + "','" + cbQType.SelectedItem.ToString() + "')";
                 
                 }
                 
@@ -236,7 +236,9 @@ namespace FIXBOX
                 AddChoice.id = getvaluefromDB(con,"QPrinters_Id");
 
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message);
+            catch (Exception ex) {
+                con.Close();
+                MessageBox.Show(ex.Message);
             }
         }
 
