@@ -108,7 +108,7 @@ namespace FIXBOX
             string Val = " ";
             try
             {
-                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from Choices where choice_ch='"+cbChoices.SelectedItem.ToString()+"'", con);
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from Choices where choice_ch='"+cbChoices.SelectedItem+"'", con);
                 DataTable dt = new DataTable();
                 con.Open();
                 Cmd_CI.Fill(dt);
@@ -163,13 +163,7 @@ namespace FIXBOX
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            if(tbOrder.Enabled==false){
-            tbOrder.Enabled = true;
-            btnOrder.Text = "Lock";
-            }else{
-                tbOrder.Enabled = false;
-                btnOrder.Text = "Unlock";
-            }
+            
         }
 
         private void btnBrowse_Click(object sender, EventArgs e)

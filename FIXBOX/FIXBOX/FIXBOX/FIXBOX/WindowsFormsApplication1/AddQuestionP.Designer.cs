@@ -58,16 +58,12 @@
             this.tbOrder = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnOrder = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -152,17 +148,18 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.btnRefresh);
+            this.panel7.Controls.Add(this.btnDelete);
             this.panel7.Controls.Add(this.cbDelete);
             this.panel7.Controls.Add(this.label1);
-            this.panel7.Controls.Add(this.btnDelete);
             this.panel7.Controls.Add(this.btnClear);
             this.panel7.Controls.Add(this.btnSave);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel7.Location = new System.Drawing.Point(785, 218);
+            this.panel7.Location = new System.Drawing.Point(715, 218);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(160, 329);
+            this.panel7.Size = new System.Drawing.Size(230, 329);
             this.panel7.TabIndex = 6;
             // 
             // cbDelete
@@ -173,7 +170,7 @@
             this.cbDelete.Location = new System.Drawing.Point(0, 17);
             this.cbDelete.Margin = new System.Windows.Forms.Padding(2);
             this.cbDelete.Name = "cbDelete";
-            this.cbDelete.Size = new System.Drawing.Size(160, 25);
+            this.cbDelete.Size = new System.Drawing.Size(230, 25);
             this.cbDelete.TabIndex = 4;
             // 
             // label1
@@ -183,17 +180,17 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 17);
+            this.label1.Size = new System.Drawing.Size(219, 17);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Choose one to delete:";
+            this.label1.Text = "Choose one to preform an action:";
             // 
             // btnDelete
             // 
-            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnDelete.Location = new System.Drawing.Point(0, 233);
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDelete.Location = new System.Drawing.Point(0, 42);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(160, 32);
+            this.btnDelete.Size = new System.Drawing.Size(230, 32);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -205,7 +202,7 @@
             this.btnClear.Location = new System.Drawing.Point(0, 265);
             this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(160, 32);
+            this.btnClear.Size = new System.Drawing.Size(230, 32);
             this.btnClear.TabIndex = 1;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -217,7 +214,7 @@
             this.btnSave.Location = new System.Drawing.Point(0, 297);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(160, 32);
+            this.btnSave.Size = new System.Drawing.Size(230, 32);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -372,7 +369,6 @@
             // tbOrder
             // 
             this.tbOrder.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbOrder.Enabled = false;
             this.tbOrder.Location = new System.Drawing.Point(0, 17);
             this.tbOrder.Margin = new System.Windows.Forms.Padding(2);
             this.tbOrder.Name = "tbOrder";
@@ -392,47 +388,23 @@
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.panel10);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(530, 218);
             this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(255, 329);
+            this.panel9.Size = new System.Drawing.Size(185, 329);
             this.panel9.TabIndex = 8;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.btnRefresh);
-            this.panel10.Controls.Add(this.btnOrder);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(255, 39);
-            this.panel10.TabIndex = 0;
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnRefresh.Location = new System.Drawing.Point(56, 0);
+            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnRefresh.Location = new System.Drawing.Point(0, 233);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(199, 39);
+            this.btnRefresh.Size = new System.Drawing.Size(230, 32);
             this.btnRefresh.TabIndex = 5;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // btnOrder
-            // 
-            this.btnOrder.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnOrder.Location = new System.Drawing.Point(0, 0);
-            this.btnOrder.Margin = new System.Windows.Forms.Padding(2);
-            this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(56, 39);
-            this.btnOrder.TabIndex = 0;
-            this.btnOrder.Text = "Unlock Order";
-            this.btnOrder.UseVisualStyleBackColor = true;
-            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // AddQuestionP
             // 
@@ -458,8 +430,6 @@
             this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -490,8 +460,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbOrder;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.ComboBox cbChoices;
