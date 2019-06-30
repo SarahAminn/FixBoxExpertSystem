@@ -59,6 +59,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnSelect = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel6.SuspendLayout();
@@ -148,6 +149,7 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.btnSelect);
             this.panel7.Controls.Add(this.btnRefresh);
             this.panel7.Controls.Add(this.btnDelete);
             this.panel7.Controls.Add(this.cbDelete);
@@ -406,6 +408,17 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // btnSelect
+            // 
+            this.btnSelect.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSelect.Location = new System.Drawing.Point(0, 74);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(230, 32);
+            this.btnSelect.TabIndex = 6;
+            this.btnSelect.Text = "Select";
+            this.btnSelect.UseVisualStyleBackColor = true;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            // 
             // AddQuestionP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -467,5 +480,6 @@
         private System.Windows.Forms.ComboBox cbQType;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbQuest;
+        private System.Windows.Forms.Button btnSelect;
     }
 }

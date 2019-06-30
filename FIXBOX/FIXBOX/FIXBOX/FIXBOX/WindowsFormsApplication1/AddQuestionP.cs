@@ -248,5 +248,10 @@ namespace FIXBOX
             cbChoices.Enabled = true;
             loadComboBox("select choice_ch from Choices where choice_Question='"+cbQuest.SelectedItem.ToString()+"'", cbChoices);
         }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            AddChoice.id = cbDelete.SelectedItem.ToString();
+        }
     }
 }

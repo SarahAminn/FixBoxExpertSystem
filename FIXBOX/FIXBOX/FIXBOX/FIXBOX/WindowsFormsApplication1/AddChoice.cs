@@ -20,7 +20,7 @@ namespace FIXBOX
         {
             InitializeComponent();
             con.ConnectionString = "data source = (local);database = FIXBOX;integrated security = SSPI";
-            loadComboBox("select choice_Id from Choices where choice_Question ='"+id+"'", cbChoice);
+            loadComboBox("select choice_ch from Choices where choice_Question ='"+id+"'", cbChoice);
         }
 
         // Loads Comboboxes
@@ -126,14 +126,14 @@ namespace FIXBOX
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            loadComboBox("select choice_Id from Choices where choice_Question ='" + id + "'", cbChoice);
+            loadComboBox("select choice_ch from Choices where choice_Question ='" + id + "'", cbChoice);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             try
             {
-                SqlCommand cmd_Del = new SqlCommand("delete from Choices where choice_Id='" + cbChoice.SelectedItem.ToString() + "'", con);
+                SqlCommand cmd_Del = new SqlCommand("delete from Choices where choice_ch='" + cbChoice.SelectedItem.ToString() + "' and choice_Question='"+id+"'", con);
                 if (con.State != ConnectionState.Open)
                     con.Open();
                 cmd_Del.ExecuteNonQuery();
@@ -151,6 +151,24 @@ namespace FIXBOX
             AddChoiceSolution CS = new AddChoiceSolution();
             this.Parent.Controls.Add(CS);
             CS.BringToFront();
+        }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                
+                SqlCommand cmd = new SqlCommand("select choice_Id from Choices where choice_ch='" + cbChoice.SelectedItem.ToString() + "' and choice_Question='" + id + "'", con);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                if (reader.HasRows) {
+
+                    AddChoiceSolution.id = reader[0].ToString();
+                }
+                
+            }
+            catch (Exception ex) { con.Close(); MessageBox.Show(ex.Message); }
         }
 
 
