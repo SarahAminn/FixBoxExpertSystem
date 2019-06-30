@@ -50,7 +50,7 @@ namespace FIXBOX
         private void Questions_Load(object sender, EventArgs e)
         {
             GetData();
-           // check if the err n msg is found
+           
             try
             {
                 SqlCommand cmd = new SqlCommand("select Company_ErrNMsg from Companys where Company_Id='" + co + "'", con);
