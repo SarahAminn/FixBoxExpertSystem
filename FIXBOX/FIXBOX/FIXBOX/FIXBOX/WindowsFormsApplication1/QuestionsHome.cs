@@ -15,7 +15,7 @@ namespace FIXBOX
     public partial class QuestionsHome : UserControl
     {
         SqlConnection con = new SqlConnection();
-        public static string type, it,cho=null,co,chSol ;
+        public static string  it,cho=null,co,chSol ;
         int order = 1, max=1;
         
         public QuestionsHome()
@@ -34,7 +34,7 @@ namespace FIXBOX
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("select MAX(QPrinters_Order) from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='"+Questions.operation+"'and QPrinters_Type='"+type+"'", con);
+                SqlCommand cmd = new SqlCommand("select MAX(QPrinters_Order) from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='"+Questions.operation+"'", con);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();
@@ -56,7 +56,7 @@ namespace FIXBOX
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("select printers_IType,printer_Type,printer_Company from Printers where printer_Id='" + Device.id + "'", con);
+                SqlCommand cmd = new SqlCommand("select printers_IType,printer_Company from Printers where printer_Id='" + Device.id + "'", con);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();
@@ -64,8 +64,8 @@ namespace FIXBOX
                 {
                     
                     it = reader[0].ToString();
-                    type = reader[1].ToString();
-                    co = reader[2].ToString();
+                    
+                    co = reader[1].ToString();
                 }
                 con.Close();
             }
@@ -82,7 +82,7 @@ namespace FIXBOX
             string Val = " ";
             try
             {
-                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select "+Col+" from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_Order='"+order.ToString()+"' and QPrinters_Type='"+type+"'", con);
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select "+Col+" from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_Order='"+order.ToString()+"'", con);
                 DataTable dt = new DataTable();
                 con.Open();
                 Cmd_CI.Fill(dt);
@@ -108,7 +108,7 @@ namespace FIXBOX
             string Val = " ";
             try
             {
-                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_Type='" + type + "' and QPrinters_ConCh='"+choice+"'", con);
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_ConCh='"+choice+"'", con);
                 DataTable dt = new DataTable();
                 con.Open();
                 Cmd_CI.Fill(dt);
@@ -134,7 +134,7 @@ namespace FIXBOX
             
             try
             {
-                SqlCommand cmd = new SqlCommand("select QPrinters_Question from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_Order='" + order.ToString() + "' and QPrinters_Type='" + type + "'", con);
+                SqlCommand cmd = new SqlCommand("select QPrinters_Question from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_Order='" + order.ToString() + "'", con);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();
@@ -159,7 +159,7 @@ namespace FIXBOX
             
             try
             {
-                SqlCommand cmd = new SqlCommand("select QPrinters_Question from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_Type='" + type + "' and QPrinters_ConCh='" + Choice + "'", con);
+                SqlCommand cmd = new SqlCommand("select QPrinters_Question from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_ConCh='" + Choice + "'", con);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();

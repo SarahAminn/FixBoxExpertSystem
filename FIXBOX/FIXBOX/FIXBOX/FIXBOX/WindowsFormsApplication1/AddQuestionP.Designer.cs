@@ -37,9 +37,11 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btnSelect = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.cbDelete = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -51,15 +53,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tbIT = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.tbType = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.tbQuestion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tbOrder = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnSelect = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel6.SuspendLayout();
@@ -164,6 +162,40 @@
             this.panel7.Size = new System.Drawing.Size(230, 329);
             this.panel7.TabIndex = 6;
             // 
+            // btnSelect
+            // 
+            this.btnSelect.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSelect.Location = new System.Drawing.Point(0, 74);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(230, 32);
+            this.btnSelect.TabIndex = 6;
+            this.btnSelect.Text = "Select";
+            this.btnSelect.UseVisualStyleBackColor = true;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnRefresh.Location = new System.Drawing.Point(0, 233);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(230, 32);
+            this.btnRefresh.TabIndex = 5;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDelete.Location = new System.Drawing.Point(0, 42);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(230, 32);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // cbDelete
             // 
             this.cbDelete.Dock = System.Windows.Forms.DockStyle.Top;
@@ -185,18 +217,6 @@
             this.label1.Size = new System.Drawing.Size(219, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Choose one to preform an action:";
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDelete.Location = new System.Drawing.Point(0, 42);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(230, 32);
-            this.btnDelete.TabIndex = 2;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClear
             // 
@@ -232,8 +252,6 @@
             this.panel8.Controls.Add(this.label7);
             this.panel8.Controls.Add(this.tbIT);
             this.panel8.Controls.Add(this.label5);
-            this.panel8.Controls.Add(this.tbType);
-            this.panel8.Controls.Add(this.label4);
             this.panel8.Controls.Add(this.tbQuestion);
             this.panel8.Controls.Add(this.label3);
             this.panel8.Controls.Add(this.tbOrder);
@@ -251,7 +269,7 @@
             this.cbChoices.Dock = System.Windows.Forms.DockStyle.Top;
             this.cbChoices.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbChoices.FormattingEnabled = true;
-            this.cbChoices.Location = new System.Drawing.Point(0, 261);
+            this.cbChoices.Location = new System.Drawing.Point(0, 221);
             this.cbChoices.Name = "cbChoices";
             this.cbChoices.Size = new System.Drawing.Size(322, 25);
             this.cbChoices.TabIndex = 11;
@@ -260,7 +278,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.Location = new System.Drawing.Point(0, 244);
+            this.label6.Location = new System.Drawing.Point(0, 204);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(191, 17);
             this.label6.TabIndex = 10;
@@ -271,7 +289,7 @@
             this.cbQuest.Dock = System.Windows.Forms.DockStyle.Top;
             this.cbQuest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbQuest.FormattingEnabled = true;
-            this.cbQuest.Location = new System.Drawing.Point(0, 219);
+            this.cbQuest.Location = new System.Drawing.Point(0, 179);
             this.cbQuest.Name = "cbQuest";
             this.cbQuest.Size = new System.Drawing.Size(322, 25);
             this.cbQuest.TabIndex = 13;
@@ -281,7 +299,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label8.Location = new System.Drawing.Point(0, 202);
+            this.label8.Location = new System.Drawing.Point(0, 162);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(128, 17);
             this.label8.TabIndex = 12;
@@ -292,7 +310,7 @@
             this.cbQType.Dock = System.Windows.Forms.DockStyle.Top;
             this.cbQType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbQType.FormattingEnabled = true;
-            this.cbQType.Location = new System.Drawing.Point(0, 177);
+            this.cbQType.Location = new System.Drawing.Point(0, 137);
             this.cbQType.Name = "cbQType";
             this.cbQType.Size = new System.Drawing.Size(322, 25);
             this.cbQType.TabIndex = 9;
@@ -301,7 +319,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label7.Location = new System.Drawing.Point(0, 160);
+            this.label7.Location = new System.Drawing.Point(0, 120);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(105, 17);
@@ -311,7 +329,7 @@
             // tbIT
             // 
             this.tbIT.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbIT.Location = new System.Drawing.Point(0, 137);
+            this.tbIT.Location = new System.Drawing.Point(0, 97);
             this.tbIT.Margin = new System.Windows.Forms.Padding(2);
             this.tbIT.Name = "tbIT";
             this.tbIT.Size = new System.Drawing.Size(322, 23);
@@ -321,32 +339,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label5.Location = new System.Drawing.Point(0, 120);
+            this.label5.Location = new System.Drawing.Point(0, 80);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 17);
             this.label5.TabIndex = 6;
             this.label5.Text = "Industrial Type:";
-            // 
-            // tbType
-            // 
-            this.tbType.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbType.Location = new System.Drawing.Point(0, 97);
-            this.tbType.Margin = new System.Windows.Forms.Padding(2);
-            this.tbType.Name = "tbType";
-            this.tbType.Size = new System.Drawing.Size(322, 23);
-            this.tbType.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Location = new System.Drawing.Point(0, 80);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 17);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Printer Type:";
             // 
             // tbQuestion
             // 
@@ -397,28 +395,6 @@
             this.panel9.Size = new System.Drawing.Size(185, 329);
             this.panel9.TabIndex = 8;
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnRefresh.Location = new System.Drawing.Point(0, 233);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(230, 32);
-            this.btnRefresh.TabIndex = 5;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // btnSelect
-            // 
-            this.btnSelect.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSelect.Location = new System.Drawing.Point(0, 74);
-            this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(230, 32);
-            this.btnSelect.TabIndex = 6;
-            this.btnSelect.Text = "Select";
-            this.btnSelect.UseVisualStyleBackColor = true;
-            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
-            // 
             // AddQuestionP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -467,8 +443,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox tbIT;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox tbType;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbQuestion;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbOrder;
