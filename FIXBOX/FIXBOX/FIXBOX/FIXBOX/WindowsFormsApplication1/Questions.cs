@@ -14,7 +14,8 @@ namespace FIXBOX
 {
     public partial class Questions : UserControl
     {
-        SqlConnection con;
+        SqlConnection con = new SqlConnection();
+        string co;
         public static string operation;
         public Questions()
         {
@@ -22,12 +23,52 @@ namespace FIXBOX
             con.ConnectionString = "data source = (local);database = FIXBOX;integrated security = SSPI";
         }
 
+        private void GetData()
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("select printer_Company from Printers where printer_Id='" + Device.id + "'", con);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                if (reader.HasRows)
+                {
+
+                   
+                    co = reader[0].ToString();
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
         private void Questions_Load(object sender, EventArgs e)
         {
+            GetData();
            // check if the err n msg is found
             try
             {
-                SqlCommand cmd = new SqlCommand("select ",con);
+                SqlCommand cmd = new SqlCommand("select Company_ErrNMsg from Companys where Company_Id='" + co + "'", con);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                if (reader.HasRows) {
+                    bool ms = (bool)reader[0];
+                    if (ms == true)
+                    {
+                        btnMsgOrCode.Visible = true;
+                    }
+                    else {
+                        btnMsgOrCode.Visible = false;
+                    }
+                }
+                con.Close();
+                
 
             }
             catch (Exception ex) { con.Close(); MessageBox.Show(ex.Message); }
