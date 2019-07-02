@@ -266,13 +266,58 @@ namespace FIXBOX
                     this.Hide();
                 
                 }else if(!reader.HasRows){
+                    SqlCommand cmd_ques = new SqlCommand("select QPrinters_Question from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_ConCh='" + cho + "'", con);
+                    con.Open();
+                    SqlDataReader red = cmd_ques.ExecuteReader();
+                    red.Read();
+                    if (red.HasRows)
+                    {
+                        loadComboBox("select choice_ch from Choices where choice_Question='" + getvaluefromQuestions(con, "QPrinters_Id", cho) + "' ", comboBox1);
+                        loadrichtextbox(cho);
+                    }
+                    else { 
+                    MessageBox.Show("No Solution found Please Contact the Companys Support!!","No Solution",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    GoToSite(getvaluefromCompanys(con, "company_WebSearch") + Device.Model);
+                    
+                    }
                     con.Close();
-                    loadComboBox("select choice_ch from Choices where choice_Question='" + getvaluefromQuestions(con, "QPrinters_Id",cho) + "' ", comboBox1);
-                    loadrichtextbox(cho);
+                    
                 
                 }
             }
             catch (Exception ex) { con.Close(); MessageBox.Show(ex.Message); }
+        }
+
+        public static void GoToSite(string url)
+        {
+            System.Diagnostics.Process.Start(url);
+        }
+
+        public string getvaluefromCompanys(SqlConnection con, String Col)
+        {
+
+            string Val = " ";
+            try
+            {
+                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from Companys where Company_Id='" + Device.co + "'", con);
+                DataTable dt = new DataTable();
+                con.Open();
+                Cmd_CI.Fill(dt);
+
+                if (dt.Rows.Count == 1)
+                {
+
+                    DataRow row = dt.Rows[0];
+                    Val = row[Col].ToString();
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return Val;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

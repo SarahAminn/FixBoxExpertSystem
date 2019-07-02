@@ -35,7 +35,6 @@ PENM_IType varchar(max) not null
 create table QuestionsPrinters (
 QPrinters_Id int IDENTITY not null primary key,
 QPrinters_Question varchar(max) not null,
-QPrinters_Type varchar(max) not null,
 QPrinters_Order int not null,
 QPrinters_IType varchar(max) not null,
 QPrinters_QType varchar(max) not null,
