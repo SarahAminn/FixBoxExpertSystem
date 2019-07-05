@@ -170,7 +170,7 @@ namespace FIXBOX
                 this.Parent.Controls.Add(Q);
                 Q.Dock = DockStyle.Fill;
                 Q.BringToFront();
-                this.Hide();
+                
 
             }
             else if (Dial == DialogResult.No)
