@@ -16,7 +16,7 @@ namespace FIXBOX
     {
         SqlConnection con = new SqlConnection();
         public static string  it,cho=null,co,chSol ;
-        int order = 1, max=1;
+        int order = 1, max=1,counter=0;
         
         public QuestionsHome()
         {
@@ -211,6 +211,7 @@ namespace FIXBOX
 
         public string getvaluefromchoices(SqlConnection con, String Col)
         {
+            
             // find solution to getquest
             string Val = " ";
             try
@@ -248,9 +249,11 @@ namespace FIXBOX
         
         private void button2_Click(object sender, EventArgs e)
         {
+            
+           
             cho = getvaluefromchoices(con, "choice_Id");
-            try
-            {
+           // try
+         //   {
                 
                 SqlCommand cmd_sol = new SqlCommand("select CHSol_Id from ChoiceSolutions where CHSol_Choice ='" + cho + "'", con);
                 con.Open();
@@ -263,10 +266,14 @@ namespace FIXBOX
                     QSol.BringToFront();
                     QSol.Dock = DockStyle.Fill;
                     con.Close();
+                   
                     this.Hide();
                 
-                }else if(!reader.HasRows){
-                    SqlCommand cmd_ques = new SqlCommand("select QPrinters_Question from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_ConCh='" + cho + "'", con);
+                }else{
+                    SqlCommand cmd_ques;
+                    
+                     cmd_ques = new SqlCommand("select QPrinters_Question from QuestionsPrinters where QPrinters_IType='" + it + "' and QPrinters_QType='" + Questions.operation + "' and QPrinters_ConCh='" + cho + "'", con);
+                    
                     con.Open();
                     SqlDataReader red = cmd_ques.ExecuteReader();
                     red.Read();
@@ -274,18 +281,22 @@ namespace FIXBOX
                     {
                         loadComboBox("select choice_ch from Choices where choice_Question='" + getvaluefromQuestions(con, "QPrinters_Id", cho) + "' ", comboBox1);
                         loadrichtextbox(cho);
+                        con.Close();
                     }
                     else { 
                     MessageBox.Show("No Solution found Please Contact the Companys Support!!","No Solution",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     GoToSite(getvaluefromCompanys(con, "company_WebSearch") + Device.Model);
+                    con.Close();
                     
                     }
                     con.Close();
                     
                 
                 }
-            }
-            catch (Exception ex) { con.Close(); MessageBox.Show(ex.Message); }
+                con.Close();
+           // }
+           // catch (Exception ex) { con.Close(); MessageBox.Show(ex.Message); }
+                counter++;
         }
 
         public static void GoToSite(string url)

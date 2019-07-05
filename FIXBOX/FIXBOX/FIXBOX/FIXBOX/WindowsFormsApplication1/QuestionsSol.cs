@@ -134,6 +134,7 @@ namespace FIXBOX
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            QuestionsHome.cho = null;
             DeviceMain DV = new DeviceMain();
             this.Parent.Controls.Add(DV);
             DV.Dock = DockStyle.Fill;
