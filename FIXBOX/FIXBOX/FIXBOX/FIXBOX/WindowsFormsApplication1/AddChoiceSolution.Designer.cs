@@ -90,6 +90,7 @@
             this.pictureBox_Sol.Location = new System.Drawing.Point(0, 32);
             this.pictureBox_Sol.Name = "pictureBox_Sol";
             this.pictureBox_Sol.Size = new System.Drawing.Size(542, 226);
+            this.pictureBox_Sol.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_Sol.TabIndex = 2;
             this.pictureBox_Sol.TabStop = false;
             // 

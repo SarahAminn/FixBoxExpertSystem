@@ -110,6 +110,7 @@
             // cbChoice
             // 
             this.cbChoice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbChoice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbChoice.FormattingEnabled = true;
             this.cbChoice.Location = new System.Drawing.Point(0, 98);
             this.cbChoice.Name = "cbChoice";
