@@ -16,7 +16,7 @@ namespace FIXBOX
     {
         SqlConnection con = new SqlConnection();
         public static string  it,cho=null,co,chSol ;
-        int order = 1, max=1,counter=0;
+        int order = 1, max=1;
         
         public QuestionsHome()
         {
@@ -252,8 +252,8 @@ namespace FIXBOX
             
            
             cho = getvaluefromchoices(con, "choice_Id");
-           // try
-         //   {
+            try
+            {
                 
                 SqlCommand cmd_sol = new SqlCommand("select CHSol_Id from ChoiceSolutions where CHSol_Choice ='" + cho + "'", con);
                 con.Open();
@@ -294,9 +294,9 @@ namespace FIXBOX
                 
                 }
                 con.Close();
-           // }
-           // catch (Exception ex) { con.Close(); MessageBox.Show(ex.Message); }
-                counter++;
+            }
+            catch (Exception ex) { con.Close(); MessageBox.Show(ex.Message); }
+                
         }
 
         public static void GoToSite(string url)
