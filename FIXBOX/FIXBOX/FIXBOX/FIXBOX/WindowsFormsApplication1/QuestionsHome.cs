@@ -252,8 +252,8 @@ namespace FIXBOX
             
            
             cho = getvaluefromchoices(con, "choice_Id");
-           // try
-           // {
+            try
+            {
                 
                 SqlCommand cmd_sol = new SqlCommand("select CHSol_Id from ChoiceSolutions where CHSol_Choice ='" + cho + "'", con);
                 con.Open();
@@ -301,8 +301,8 @@ namespace FIXBOX
                 
                 }
                 con.Close();
-           // }
-            //catch (Exception ex) { con.Close(); MessageBox.Show(ex.Message); }
+            }
+            catch (Exception ex) { con.Close(); MessageBox.Show(ex.Message); }
                 
         }
 
