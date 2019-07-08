@@ -170,5 +170,21 @@ namespace FIXBOX
             LoadTable(dataGridView1);
             loadComboBox("select PENM_CodeOrMsg from PrintersErrNMsg", cbDelete);
         }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            SqlCommand cmdgetid = new SqlCommand("select PENM_Id from PrintersErrNMsg where PENM_CodeOrMsg='" + cbDelete.SelectedItem.ToString() + "'", con);
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            SqlDataReader read = cmdgetid.ExecuteReader();
+
+            read.Read();
+            if (read.HasRows)
+            {
+                AddErrNMsgSolutions.id = read[0].ToString();
+            }
+            con.Close();
+            MessageBox.Show("Record Selected");
+        }
     }
 }
