@@ -75,32 +75,7 @@ namespace FIXBOX
 
             return Val;
         }
-        public string getvaluefromDB(String Col, String SelectedCol1,String SelectedCol2 , String SelectedCol3 , String TBname, SqlConnection con, TextBox tb, ComboBox cb , TextBox tb1)
-        {
-
-            string Val = " ";
-            try
-            {
-                SqlDataAdapter Cmd_CI = new SqlDataAdapter("select " + Col + " from " + TBname + " where " + SelectedCol1 + "='" + getvaluefromDB("Company_Id", "Company_Name", "Companys", con, cbCo) + "'and " + SelectedCol2 + "='" + tb.Text + "'", con);
-                DataTable dt = new DataTable();
-                con.Open();
-                Cmd_CI.Fill(dt);
-
-                if (dt.Rows.Count == 1)
-                {
-
-                    DataRow row = dt.Rows[0];
-                    Val = row[Col].ToString();
-                }
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            return Val;
-        }
+        
 
 
         // Loads Data Grid Views
@@ -167,7 +142,16 @@ namespace FIXBOX
                 con.Close();
                 MessageBox.Show(x.ToString() + " record(s) saved.");
 
-                AddErrNMsgSolutions.id = getvaluefromDB("PENM_Id", "PENM_Company", "PENM_IType", "PENM_CodeOrMsg", "PrintersErrNMsg", con, tbIT, cbCo, tbCodeMsg);
+                SqlCommand cmdgetid = new SqlCommand("select PENM_Id from PrintersErrNMsg where PENM_CodeOrMsg='" + tbCodeMsg.Text + "' and PENM_Company='" + getvaluefromDB("Company_Id", "Company_Name", "Companys", con, cbCo) + "' and PENM_IType='" + tbIT.Text + "' ", con);
+                if (con.State != ConnectionState.Open)
+                    con.Open();
+                SqlDataReader read = cmdgetid.ExecuteReader();
+                
+                read.Read();
+                if (read.HasRows) {
+                    AddErrNMsgSolutions.id = read[0].ToString();
+                }
+                con.Close();
             
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
@@ -182,7 +166,9 @@ namespace FIXBOX
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            cbDelete.Items.Clear();
             LoadTable(dataGridView1);
+            loadComboBox("select PENM_CodeOrMsg from PrintersErrNMsg", cbDelete);
         }
     }
 }
