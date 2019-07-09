@@ -90,9 +90,9 @@
             this.button2.Dock = System.Windows.Forms.DockStyle.Right;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(514, 0);
+            this.button2.Location = new System.Drawing.Point(495, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 41);
+            this.button2.Size = new System.Drawing.Size(116, 41);
             this.button2.TabIndex = 1;
             this.button2.Text = "Continue";
             this.button2.UseVisualStyleBackColor = false;
@@ -138,12 +138,12 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(23, 146);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(611, 38);
+            this.comboBox1.Size = new System.Drawing.Size(611, 47);
             this.comboBox1.TabIndex = 6;
             // 
             // QuestionsHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 39F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel6);

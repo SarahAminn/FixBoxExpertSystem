@@ -281,7 +281,7 @@ namespace FIXBOX
                     cmd_ques.Fill(red);
                     if (red.Rows.Count!=0)
                     {
-                        MessageBox.Show("inside if has rows");
+                        
                         DataRow rw = red.Rows[0];
                         chSol = rw["QPrinters_Question"].ToString();
                         qid = rw["QPrinters_Id"].ToString();
@@ -289,13 +289,15 @@ namespace FIXBOX
                         richTextBox1.Text = chSol;
                         loadComboBox("select choice_ch from Choices where choice_Question='"+qid+"'", comboBox1);
                     }
-                    else {
-                        MessageBox.Show("inside else");
-                    MessageBox.Show("No Solution found Please Contact the Companys Support!!","No Solution",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                    GoToSite(getvaluefromCompanys(con, "company_WebSearch") + Device.Model);
-                    con.Close();
-                    
+                    else if (red.Rows.Count == 0)
+                    {
+                       
+                        MessageBox.Show("No Solution found Please Contact the Companys Support!!", "No Solution", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        GoToSite(getvaluefromCompanys(con, "company_WebSearch") + Device.Model);
+                        con.Close();
+
                     }
+                    
                     con.Close();
                     
                 

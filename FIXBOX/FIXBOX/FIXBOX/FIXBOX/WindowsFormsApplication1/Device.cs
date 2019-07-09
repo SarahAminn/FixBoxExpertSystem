@@ -72,6 +72,7 @@ namespace FIXBOX
         {
             comboBox1.Text = "Choose the Device Company...";
             loadComboBox("select Company_name from Companys", comboBox1);
+            textBox1.Enabled = false;
         }
 
         public string getvaluefromCompanys(SqlConnection con, String Col)
@@ -147,6 +148,11 @@ namespace FIXBOX
                 DM.BringToFront();
                 
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBox1.Enabled = true;
         }
     }
 }
